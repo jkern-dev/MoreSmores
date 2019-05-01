@@ -17,9 +17,8 @@ const Greeting = ({ currentUser, logout }) => {
 
     const personalGreeting = () => (
         <header>
-            <h2>Hi, {currentUser.first_name.charAt(0).toUpperCase() +currentUser.first_name.slice(1)}</h2>
-            <br/>
-            <button onClick={logout}>Log Out</button>
+            <li className="header-link">{currentUser.first_name.charAt(0).toUpperCase() + currentUser.first_name.slice(1)}</li>
+            <li><button onClick={logout}>Log Out</button></li>
         </header>
     );
 
