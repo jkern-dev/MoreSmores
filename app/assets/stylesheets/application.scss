@@ -41,7 +41,7 @@
     }
 }
 
-.header-link:hover, .logo:hover {
+.header-link:hover, .logo:hover, .dropdown-content:hover {
     text-decoration: underline;
     text-decoration-color: green;
 }
@@ -77,6 +77,22 @@
 .splash-body {
     width: 50%;
 }
+
+.dropdown > .header-link:hover {
+    .dropdown-content { 
+        display:block;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100px;
+    text-decoration: none;
+    margin: 0 auto;
+    color: grey;
+}
+
 
 
 

@@ -10,17 +10,20 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         // </nav>
 
         <>
-            <li><Link onClick = {() => openModal('login')} className="header-link">Login</Link></li>
+            <li><Link onClick={() => openModal('login')} className="header-link">Login</Link></li>
             <li><Link onClick = {() => openModal('signup')} className="header-link">Sign Up!</Link></li>
         </>
     );
 
     const personalGreeting = () => (
-        <>
-            <li className="header-link">{currentUser.first_name.charAt(0).toUpperCase() + currentUser.first_name.slice(1)}</li>
-            {/* <li><button onClick={logout}>Log Out</button></li> */}
-            <li><Link className="header-link" onClick={logout}>Sign Out</Link></li>
-        </>
+        <div className="dropdown">
+            <li className="header-link">
+                {currentUser.first_name.charAt(0).toUpperCase() + currentUser.first_name.slice(1)}
+                <div className="dropdown-content">
+                    <Link className="dropdown-content" to="#" onClick={logout}>Sign Out</Link>
+                </div>
+            </li>
+        </div>
     );
 
     return currentUser ? personalGreeting() : sessionLinks();

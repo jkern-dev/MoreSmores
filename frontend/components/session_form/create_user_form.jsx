@@ -19,7 +19,9 @@ class AccountForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user)
+        this.props.closeModal();
+        this.props.processForm(user);
+        this.props.login(user);
     }
 
     render() {
@@ -30,10 +32,10 @@ class AccountForm extends React.Component {
                     
                     <div>
                             <input type="text"
-                                placeholder="First Name"
-                                className="form-input"
                                 value={this.state.firstName}
                                 onChange={this.update('first_name')}
+                                placeholder="First Name"
+                                className="form-input"
                             />
                         <br />
                             <input type="text"
