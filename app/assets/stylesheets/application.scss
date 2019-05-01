@@ -1,2 +1,40 @@
 @import "./session_form/session_form";
 
+.header {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-style: solid;
+}
+
+.logo{
+    width: 250px;
+    padding-right: 400px;
+}
+
+.header-nav {
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    justify-content: space-evenly;
+    ul{
+        display: flex;
+        list-style: none;
+    }
+}
+
+.header-link {
+    display: inline-block;
+    width: 80px;
+    padding-right: 5px;
+    text-decoration: none;
+    height: 100%;
+    margin: 0 auto;
+    color: grey;
+}
+
+.header-link:hover, .logo:hover {
+    text-decoration: underline;
+    text-decoration-color: green;
+}
