@@ -20,14 +20,15 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user)
+        debugger;
+        this.props.closeModal();
+        this.props.processForm(user);   
     }
 
     render() {
         return (
             <div>
                 <form onSubmit = {this.handleSubmit}>
-                    Please {this.props.formType} or {this.props.navLink}
                     <div>
                         <label>Email:
                             <input type="text"
@@ -44,6 +45,9 @@ class SessionForm extends React.Component {
                         </label>
                         <br />
                         <input type="submit" value={this.props.formType} />
+                        <br />
+                        {/* Please {this.props.formType} or {this.props.otherForm} */}
+                        Don't have an account? {this.props.otherForm}
                     </div>
                 </form>
             </div>

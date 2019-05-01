@@ -10,11 +10,13 @@ import {
 import GreetingContainer from './greeting/greeting_container';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
+import Modal from './modal';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <>
+        <Modal />
         <header className="header">
             <span ><Link to="/" ><img src={window.logo} className="logo"/></Link></span>
             

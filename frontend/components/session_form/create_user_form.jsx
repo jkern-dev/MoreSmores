@@ -26,7 +26,7 @@ class AccountForm extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    Please {this.props.formType} or {this.props.navLink}
+                    
                     <div>
                         <label>First Name:
                             <input type="text"
@@ -71,6 +71,8 @@ class AccountForm extends React.Component {
                         </label>
                         <br />
                         <input type="submit" value={this.props.formType} />
+                        <br />
+                        Already have an account? {this.props.otherForm}
                     </div>
                 </form>
             </div>
