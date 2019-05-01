@@ -1,5 +1,9 @@
 @import "./session_form/session_form";
 
+* {
+    font-family: sans-serif;
+}
+
 .header {
     width: 90%;
     display: flex;
@@ -64,4 +68,15 @@
     text-align: center;
     background: tan;
 }
+
+.splash-content {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.splash-body {
+    width: 50%;
+}
+
+
 
