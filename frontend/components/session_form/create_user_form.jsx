@@ -25,52 +25,53 @@ class AccountForm extends React.Component {
     render() {
         return (
             <div>
+                <h2>Join Hipcamp</h2>
                 <form onSubmit={this.handleSubmit}>
                     
                     <div>
-                        <label>First Name:
                             <input type="text"
+                                placeholder="First Name"
+                                className="form-input"
                                 value={this.state.firstName}
                                 onChange={this.update('first_name')}
                             />
-                        </label>
                         <br />
-                        <label>Last Name:
                             <input type="text"
                                 value={this.state.lastName}
                                 onChange={this.update('last_name')}
+                                placeholder="Last Name"
+                                className="form-input"
                             />
-                        </label>
                         <br />
-                        <label>Email:
                             <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
+                                placeholder="Email Address"
+                                className="form-input"
                             />
-                        </label>
                         <br />
-                        <label>Zip code:
                             <input type="text"
                                 value={this.state.zipCode}
                                 onChange={this.update('zip_code')}
+                                placeholder="Zip Code"
+                                className="form-input"
                             />
-                        </label>
                         <br />
-                        <label>State:
                             <input type="text"
                                 value={this.state.state}
                                 onChange={this.update('state')}
+                                placeholder="State"
+                                className="form-input"
                             />
-                        </label>
                         <br />
-                        <label>Password:
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
+                                placeholder="Password"
+                                className="form-input"
                             />
-                        </label>
                         <br />
-                        <input type="submit" value={this.props.formType} />
+                        <input className="submit-button" type="submit" value={this.props.formType} />
                         <br />
                         Already have an account? {this.props.otherForm}
                     </div>

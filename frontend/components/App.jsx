@@ -30,7 +30,6 @@ const App = () => (
             </nav>
         </header>
         <div className="splash-content">
-
             <span className="splash-title"><h2>Find yourself outside.</h2></span>
             <div className="splash-body"><p>Book unique camping experiences on over <strong>300,000</strong> campsites, ranches, vineyards, public parks and more.</p></div>
         </div>

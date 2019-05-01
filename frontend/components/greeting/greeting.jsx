@@ -16,11 +16,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     );
 
     const personalGreeting = () => (
-        <header>
+        <>
             <li className="header-link">{currentUser.first_name.charAt(0).toUpperCase() + currentUser.first_name.slice(1)}</li>
             {/* <li><button onClick={logout}>Log Out</button></li> */}
-            <li><Link onClick={logout}>Log Out</Link></li>
-        </header>
+            <li><Link className="header-link" onClick={logout}>Sign Out</Link></li>
+        </>
     );
 
     return currentUser ? personalGreeting() : sessionLinks();
