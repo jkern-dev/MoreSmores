@@ -82,7 +82,7 @@ class AccountForm extends React.Component {
                         <br />
                         <p className="alternative">Already have an account?</p>
                         {this.props.otherForm}
-                        <input className="submit-button" type="submit" value={this.props.formType} />
+                        <input className="demo-button" type="submit" value={this.props.formType} />
                     </div>
                 </form>
             </div>
