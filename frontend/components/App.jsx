@@ -14,6 +14,9 @@ import Modal from './modal';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+const splash_title = ["Find yourself outside.", "Everywhere you want to camp.", "It was in-tents."];
+const random_splash = splash_title[Math.floor((Math.random()*splash_title.length))];
+
 const App = () => (
     <>
         <Modal />
@@ -30,7 +33,7 @@ const App = () => (
             </nav>
         </header>
         <div className="splash-content">
-            <span className="splash-title"><h2>Find yourself outside.</h2></span>
+            <span className="splash-title"><h2>{random_splash}</h2></span>
             <div className="splash-body"><p>Book unique camping experiences on over <strong>300,000</strong> campsites, ranches, vineyards, public parks and more.</p></div>
         </div>
         <Switch>

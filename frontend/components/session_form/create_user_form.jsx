@@ -8,6 +8,7 @@ class AccountForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'];
     }
 
     update(field) {
@@ -24,7 +25,14 @@ class AccountForm extends React.Component {
         this.props.login(user);
     }
 
+    renderStateItem(state) {
+        return (
+            <option value={state}>{state}</option>
+        )
+    }
+
     render() {
+
         return (
             <div>
                 <h2>Join Hipcamp</h2>
@@ -59,12 +67,11 @@ class AccountForm extends React.Component {
                                 className="form-input"
                             />
                         <br />
-                            <input type="text"
-                                value={this.state.state}
-                                onChange={this.update('state')}
-                                placeholder="State"
-                                className="form-input"
-                            />
+                        <label className="state-input">State: 
+                                <select className="state-list" onChange={this.update("state")}>
+                                    {this.states.map((state) => this.renderStateItem(state))}
+                                </select>
+                        </label>        
                         <br />
                             <input type="password"
                                 value={this.state.password}
@@ -73,9 +80,9 @@ class AccountForm extends React.Component {
                                 className="form-input"
                             />
                         <br />
+                        <p className="alternative">Already have an account?</p>
+                        {this.props.otherForm}
                         <input className="submit-button" type="submit" value={this.props.formType} />
-                        <br />
-                        Already have an account? {this.props.otherForm}
                     </div>
                 </form>
             </div>

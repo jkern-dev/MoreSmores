@@ -13,17 +13,35 @@
 }
 
 .submit-button {
-    width: 85%;
+    width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-bottom: 10px;
-    background-color: #00ff00;
+    margin-top: 5px;
+    background-color: #00e673;
     color: white;
     font-size: 1.3rem;
 }
 
 .submit-button:hover {
-    background-color: #00b300;
+    background-color: #00cc66;
+}
+
+.alternative {
+    margin: 0 auto;
 }
 
 
+.state-input {
+    width: 85%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align:center;
+}
+
+.state-list {
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align:center;
+    background: white;
+}

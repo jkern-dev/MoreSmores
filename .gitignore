@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+bundle.js*
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -16,7 +17,6 @@
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-
 /node_modules
 /yarn-error.log
 
