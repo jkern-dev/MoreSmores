@@ -34,7 +34,6 @@ class SessionForm extends React.Component {
             password: "moresmores"
         });
         this.props.closeModal();
-
     }
 
     render() {
@@ -60,8 +59,8 @@ class SessionForm extends React.Component {
                             />
                         <p className="alternative">Don't have an account?</p>
                         {this.props.otherForm}
-                        <button onClick= {this.demoLogin} className="form-input">Demo Login</button>
                         <input type="submit" value={this.props.formType} className = "submit-button"/>
+                        <button onClick={this.demoLogin} className="demo-button">Demo Login</button>
                     </div>
                 </form>
             </div>

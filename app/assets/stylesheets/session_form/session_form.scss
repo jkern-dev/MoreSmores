@@ -13,7 +13,7 @@
 }
 
 .submit-button {
-    width: 100%;
+    width: 85%;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-top: 5px;
@@ -22,8 +22,20 @@
     font-size: 1.3rem;
 }
 
-.submit-button:hover {
+.demo-button {
+    width: 85%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top:15px;
+    background-color: #00e673;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.submit-button:hover, .demo-button:hover {
     background-color: #00cc66;
+    cursor: pointer;
 }
 
 .alternative {
