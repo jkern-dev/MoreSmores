@@ -32,12 +32,10 @@ class AccountForm extends React.Component {
     }
 
     render() {
-
         return (
             <div>
                 <h2>Join Hipcamp</h2>
                 <form onSubmit={this.handleSubmit}>
-                    
                     <div>
                             <input type="text"
                                 value={this.state.firstName}
