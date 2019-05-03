@@ -3,7 +3,16 @@
     margin-bottom: 5px;
     padding-top: 15px;
     padding-bottom: 15px;
-    text-align:center;
+    text-align: center;
+}
+
+.form-errors-list {
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    list-style: none;
+    list-style-image: url('https://unicons.iconscout.com/release/v0.0.3/svg/exclamation-triangle.svg');
 }
 
 .form-input::placeholder {
@@ -27,7 +36,7 @@
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 10px;
-    margin-top:15px;
+    margin-top:10px;
     background-color: #00e673;
     color: white;
     font-size: 1.3rem;
@@ -40,6 +49,7 @@
 
 .alternative {
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 

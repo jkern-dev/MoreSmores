@@ -36,9 +36,9 @@ class SessionForm extends React.Component {
 
     renderErrors() {
         return(
-            <ul>
+            <ul className = "form-errors-list">
                 {this.props.errors.map((error, i) => (
-                    <li className = "form-input" key={`error-${i}`}>{error}</li>
+                    <li className = "form-errors" key={`error-${i}`}>{error}</li>
                 ))}
             </ul>
         );
@@ -52,13 +52,14 @@ class SessionForm extends React.Component {
         return (
             <div className = "form-content">
                 <h2>Welcome back!</h2>
-                {this.renderErrors()}
+                
                 <form onSubmit = {this.handleSubmit}>
+                    {this.renderErrors()}
                     <div>
                             <input type="text"
                                 value={this.state.email}                    
                                 onChange = {this.update('email')}
-                                placeholder = "Email address.."
+                                placeholder = "Email address"
                                 className = "form-input"
                                 id = "email"
                             />
@@ -66,13 +67,14 @@ class SessionForm extends React.Component {
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
-                                placeholder = "Password.."
+                                placeholder = "Password"
                                 className="form-input"
                                 id = 'pwd'
                             />
+                        <br />
                         <p className="alternative">Don't have an account?</p>
                         {this.props.otherForm}
-                        <input type="submit" value={this.props.formType} className = "submit-button"/>
+                        <input type="submit" value={this.props.formType} className = "demo-button"/>
                         <button onClick={this.demoLogin} className="demo-button">Demo Login</button>
                     </div>
                 </form>

@@ -33,9 +33,9 @@ class AccountForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="form-errors-list">
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>{error}</li>
+                    <li className="form-errors" key={`error-${i}`}>{error}</li>
                 ))}
             </ul>
         );
@@ -49,8 +49,8 @@ class AccountForm extends React.Component {
         return (
             <div>
                 <h2>Join Hipcamp</h2>
-                {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
                     <div>
                             <input type="text"
                                 value={this.state.firstName}
