@@ -67,13 +67,6 @@ class AccountForm extends React.Component {
                             />
                         <br />
                             <input type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                placeholder="Email Address"
-                                className="form-input"
-                            />
-                        <br />
-                            <input type="text"
                                 value={this.state.zipCode}
                                 onChange={this.update('zip_code')}
                                 placeholder="Zip Code"
@@ -86,12 +79,19 @@ class AccountForm extends React.Component {
                                 </select>
                         </label>        
                         <br />
-                            <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                placeholder="Password"
-                                className="form-input"
-                            />
+                        <input type="text"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            placeholder="Email Address"
+                            className="form-input"
+                        />
+                        <br />
+                        <input type="password"
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                            placeholder="Password"
+                            className="form-input"
+                        />
                         <br />
                         <p className="alternative">Already have an account?</p>
                         {this.props.otherForm}
