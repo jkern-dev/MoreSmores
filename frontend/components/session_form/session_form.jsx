@@ -53,7 +53,7 @@ class SessionForm extends React.Component {
             <div className = "form-content">
                 <h2>Welcome back!</h2>
                 
-                <form onSubmit = {this.handleSubmit}>
+                <form className = "auth-form" onSubmit = {this.handleSubmit}>
                     {this.renderErrors()}
                     <div>
                             <input type="text"
@@ -72,8 +72,8 @@ class SessionForm extends React.Component {
                                 id = 'pwd'
                             />
                         <br />
-                        <p className="alternative">Don't have an account?</p>
-                        {this.props.otherForm}
+                        <p className="alternative">Don't have an account? {this.props.otherForm}</p>
+                        
                         <input type="submit" value={this.props.formType} className = "demo-button"/>
                         <button onClick={this.demoLogin} className="demo-button">Demo Login</button>
                     </div>

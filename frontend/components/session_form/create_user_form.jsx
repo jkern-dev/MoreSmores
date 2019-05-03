@@ -49,7 +49,7 @@ class AccountForm extends React.Component {
         return (
             <div>
                 <h2>Join Hipcamp</h2>
-                <form onSubmit={this.handleSubmit}>
+                <form className = "auth-form" onSubmit={this.handleSubmit}>
                     {this.renderErrors()}
                     <div>
                             <input type="text"
@@ -93,8 +93,8 @@ class AccountForm extends React.Component {
                             className="form-input"
                         />
                         <br />
-                        <p className="alternative">Already have an account?</p>
-                        {this.props.otherForm}
+                        <p className="alternative">Already have an account? {this.props.otherForm}</p>
+                        
                         <input className="demo-button" type="submit" value={this.props.formType} />
                     </div>
                 </form>

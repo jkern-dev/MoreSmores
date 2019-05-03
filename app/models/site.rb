@@ -20,4 +20,7 @@
 
 class Site < ApplicationRecord
     validates :host_id, :name, :capacity, :rv_allowed, :pet_allowed, :bike_activity, :hike_activity, :latitude, :longitude, :state, :profile_photo_url, presence: true
+    validates :rv_allowed, :pet_allowed, :bike_activity, :hike_activity, default: false 
+
+    belongs_to :user
 end

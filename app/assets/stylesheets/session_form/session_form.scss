@@ -1,9 +1,16 @@
 .form-input {
-    width: 85%;
+    width: 100%;
     margin-bottom: 5px;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
+    border-color: black;
+    border-width: 1px;
+}
+
+.auth-form {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .form-errors-list {
@@ -18,7 +25,8 @@
 .form-input::placeholder {
     font-weight: bolder;
     color: black;
-    text-align: center;
+    text-align: left;
+    padding-left: 10px;
 }
 
 .submit-button {
@@ -32,7 +40,8 @@
 }
 
 .demo-button {
-    width: 85%;
+    width: 100%;
+    display: block;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 10px;

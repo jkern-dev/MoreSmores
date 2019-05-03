@@ -5,35 +5,41 @@
 }
 
 .header {
-    width: 90%;
+    width: 95%;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
 }
 
 .logo{
-    width: 250px;
+    width: 140px;
     padding-right: 300px;
     margin-top: 10px;
 }
 
+.not-found {
+    margin: 0 auto;
+    
+} 
 .header-nav {
     display: flex;
-    width: 100%;
-    font-size: 20px;
+    font-size: 17px;
     justify-content: space-evenly;
     ul{
         display: flex;
         list-style: none;
+        li {
+            display: flex;
+            font-size: 13px;
+            margin-left: 15px;
+        }
     }
 }
 
 .header-link {
     display: inline-block;
-    width: 90px;
     padding-right: 5px;
     text-decoration: none;
-    height: 100%;
     margin: 0 auto;
     color: grey;
     button {
@@ -52,7 +58,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(255, 255, 255,0.7);
     z-index: 10;
 }
 
@@ -60,23 +66,35 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    border-radius: 10%;
+    border-radius: 3px;
     transform: translate(-50%,-50%);
-    width: 25%;
+    width: 350px;
     margin: 0 auto;
     margin-top: 50px;
     text-align: center;
     background: white;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .splash-content {
-    width: 70%;
-    padding-top: 20px;
-    margin: 0 auto;
+    width: 60%;
+    margin-left: 10%;
+}
+
+.splash-title {
+    h2 {
+        font-size: 35px;
+    }
 }
 
 .splash-body {
-    width: 45%;
+    width: 60%;
+    font-weight: 400;
+    p {
+        margin-top: -20px;
+        font-weight: 500;
+    }
 }
 
 .dropdown > .header-link:hover {
