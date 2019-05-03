@@ -10,8 +10,6 @@ class SessionForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
-        this.demo_email = "smores@moresmores.com"
-        this.demo_pwd = "moresmores"
     }
 
     update(field) {
@@ -23,8 +21,8 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.closeModal();
-        this.props.processForm(user);   
+        // this.props.closeModal();
+        this.props.processForm(user).then(() => this.props.closeModal());   
     }
 
     demoLogin(e) {
@@ -36,10 +34,21 @@ class SessionForm extends React.Component {
         this.props.closeModal();
     }
 
+    renderErrors() {
+        return(
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>{error}</li>
+                ))}
+            </ul>
+        );
+    }
+
     render() {
         return (
             <div className = "form-content">
                 <h2>Welcome back!</h2>
+                {this.renderErrors()}
                 <form onSubmit = {this.handleSubmit}>
                     <div>
                             <input type="text"

@@ -20,8 +20,8 @@ class AccountForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.closeModal();
-        this.props.processForm(user);
+        // this.props.closeModal();
+        this.props.processForm(user).then(() => this.props.closeModal);
         this.props.login(user);
     }
 
@@ -31,10 +31,21 @@ class AccountForm extends React.Component {
         )
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>{error}</li>
+                ))}
+            </ul>
+        );
+    }
+
     render() {
         return (
             <div>
                 <h2>Join Hipcamp</h2>
+                {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
                     <div>
                             <input type="text"
