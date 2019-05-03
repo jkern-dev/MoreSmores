@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { signup, login } from '../../actions/session_actions';
+import { signup, login, clearSessionErrors } from '../../actions/session_actions';
 import AccountForm from './create_user_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
@@ -20,7 +20,8 @@ const mapDispatchToProps = dispatch => {
         otherForm: (
             <p className="header-link" onClick={() => dispatch(openModal('login'))}>Login</p>
         ),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        clearErrors: () => dispatch(clearSessionErrors())
     };
 };
 

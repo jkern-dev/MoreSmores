@@ -20,9 +20,8 @@ class AccountForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        // this.props.closeModal();
-        this.props.processForm(user).then(() => this.props.closeModal);
-        this.props.login(user);
+        this.props.processForm(user).then(() => this.props.login(user) );
+        this.props.closeModal
     }
 
     renderStateItem(state) {
@@ -39,6 +38,10 @@ class AccountForm extends React.Component {
                 ))}
             </ul>
         );
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
     }
 
     render() {
