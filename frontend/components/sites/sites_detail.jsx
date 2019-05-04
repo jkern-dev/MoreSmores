@@ -7,13 +7,19 @@ class SiteDetail extends React.Component {
     }
 
     componentDidMount () {
-        this.props.requestSite(this.props.match.params.siteId);
+        // this.props.requestSite(this.props.match.params.siteId);
     }
 
     render () {
         return (
             <>
-            <li><h1>{this.props.site.name}</h1></li>
+                <li className = "site-item">
+                    <div>
+                        <img src = {this.props.site.photoUrl} alt={this.props.site.name} />
+                        <p className = "site-title">{this.props.site.name}</p>
+                        <p>{this.props.site.description}</p>
+                    </div>
+                </li>
             </>
         )
     }
