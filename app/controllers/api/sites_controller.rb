@@ -5,13 +5,17 @@ class Api::SitesController < ApplicationController
 
     def show 
         @site = Site.find(params[:id])
+        if @site
+            render "api/sites/show"
+        else
+            render json: @site.errors.full_messages, status: 422
+        end
     end
 
     def create 
         @site = Site.new(site_params)
-
         if @site.save
-            render :show 
+            render "api/sites/show"
         else
             render json: @site.errors.full_messages, status: 422
         end
@@ -25,6 +29,6 @@ class Api::SitesController < ApplicationController
     end
 
     private 
-    def site_params
-        params.require(:site).permid(:)
+    # def site_params
+    #     params.require(:site).permid(:)
 end
