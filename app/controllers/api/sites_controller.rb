@@ -29,6 +29,20 @@ class Api::SitesController < ApplicationController
     end
 
     private 
-    # def site_params
-    #     params.require(:site).permid(:)
+    def site_params
+        params.require(:site).permit(
+            :name,
+            :capacity,
+            :fire_allowed,
+            :rv_allowed,
+            :pet_allowed,
+            :bike_activity,
+            :hike_activity,
+            :latitude,
+            :longitude,
+            :state,
+            :description,
+            photos: []
+        )
+    end
 end

@@ -9,6 +9,7 @@ import {
 
 import GreetingContainer from './greeting/greeting_container';
 import SitesIndexContainer from './sites/sites_index_container';
+import SiteFormContainer from './sites/sites_form_container';
 
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const splash_title = ["Find yourself outside.",
@@ -16,7 +17,7 @@ const splash_title = ["Find yourself outside.",
                         "It was in-tents.",
                         "A perfect day would be to get into the car, drive out to Yosemite, and go camping.",
                         "The woods are lovely, dark and deep.",
-                        "If people sat outside and looked at the stars each night,I'll bet they'd live a lot differently",
+                        "If people sat outside and looked at the stars each night, I'll bet they'd live a lot differently",
                         "My wish is to stay always like this, living quietly in a corner of nature.",
                         "Look deep into nature, and then you will understand everything better.",
                         "I go to nature to be soothed and healed, and to have my sense put in order.",
@@ -39,8 +40,9 @@ const App = () => (
             <span className="splash-title"><h2>{random_splash}</h2></span>
             <div className="splash-body"><p>Book unique camping experiences on over <strong>300,000</strong> campsites, ranches, vineyards, public parks and more.</p></div>
         </div>
-        <SitesIndexContainer />
         <Switch>
+            <Route exact path = "/sites/" component = {SitesIndexContainer} />
+            <Route exact path = "/site_create/" component = {SiteFormContainer} />
             <Route exact path="/" />
             <Redirect to="/" />
         </Switch>

@@ -11,3 +11,11 @@ export const fetchSite = id => (
         url: `/api/sites/${id}`
     })
 );
+
+export const createSite = (site) => (
+    $.ajax({
+        method: 'POST',
+        url: 'api/sites',
+        data: {site}
+    })
+);
