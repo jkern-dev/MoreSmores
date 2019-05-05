@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { reuqestSite } from '../../actions/site_actions';
+import { requestSite } from '../../actions/site_actions';
 import SiteDetail from './sites_detail';
 
 const mapStateToProps = (state, ownProps) => {

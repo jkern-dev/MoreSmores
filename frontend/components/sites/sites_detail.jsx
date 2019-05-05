@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter, Link} from 'react-router-dom';
 
 
 class SiteDetail extends React.Component {
@@ -6,13 +7,12 @@ class SiteDetail extends React.Component {
         super(props)
     }
 
-    componentDidMount () {
-        // this.props.requestSite(this.props.match.params.siteId);
-    }
 
     render () {
         return (
-            <>
+            
+            <div>
+                <Link to={`/sites/${this.props.site.id}`}>
                 <li className = "site-item">
                     <div>
                         <img src = {this.props.site.photoUrl} alt={this.props.site.name} />
@@ -20,9 +20,10 @@ class SiteDetail extends React.Component {
                         <p>{this.props.site.description}</p>
                     </div>
                 </li>
-            </>
+                </Link>
+            </div>
         )
     }
 }
 
-export default SiteDetail;
+export default withRouter(SiteDetail);

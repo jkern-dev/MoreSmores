@@ -10,6 +10,7 @@ import {
 import GreetingContainer from './greeting/greeting_container';
 import SitesIndexContainer from './sites/sites_index_container';
 import SiteFormContainer from './sites/sites_form_container';
+import SiteShowContainer from './sites/site_show_container';
 
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const splash_title = ["Find yourself outside.",
@@ -41,6 +42,7 @@ const App = () => (
             <div className="splash-body"><p>Book unique camping experiences on over <strong>300,000</strong> campsites, ranches, vineyards, public parks and more.</p></div>
         </div>
         <Switch>
+            <Route path = "/sites/:id" component = {SiteShowContainer} />
             <Route exact path = "/sites/" component = {SitesIndexContainer} />
             <Route exact path = "/site_create/" component = {SiteFormContainer} />
             <Route exact path="/" />

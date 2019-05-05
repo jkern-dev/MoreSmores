@@ -5,11 +5,11 @@ class Api::SitesController < ApplicationController
 
     def show 
         @site = Site.find(params[:id])
-        if @site
-            render "api/sites/show"
-        else
-            render json: @site.errors.full_messages, status: 422
-        end
+        # if @site
+        #     # render "api/sites/show"
+        # else
+        #     render json: @site.errors.full_messages, status: 422
+        # end
     end
 
     def create 

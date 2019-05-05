@@ -19,7 +19,7 @@ export const receiveSite = site => ({
     site
 });
 
-export const requestSite = (siteId) => (dispatch) => (
+export const requestSite = siteId => (dispatch) => (
     APIUtils.fetchSite(siteId)
         .then(site => dispatch(receiveSite(site)))
 );

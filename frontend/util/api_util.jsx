@@ -5,7 +5,7 @@ export const fetchAllSites = () => (
     })
 );
 
-export const fetchSite = id => (
+export const fetchSite = (id) => (
     $.ajax({
         method: "GET",
         url: `/api/sites/${id}`

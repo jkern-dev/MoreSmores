@@ -6,7 +6,11 @@ class SiteForm extends React.Component {
         this.state = this.props.site;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'];
     }
+
+    
+
 
     update(field) {
         return e => this.setState({
@@ -17,6 +21,12 @@ class SiteForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state);
+    }
+
+    renderStateItem(state) {
+        return (
+            <option value={state}>{state}</option>
+        )
     }
 
     handleFile(e) {
@@ -53,6 +63,20 @@ class SiteForm extends React.Component {
                     <br />
                     <label>Capacity: 
                         <input type="number" value={this.state.capacity} min="0" onChange={this.update("capacity")} />
+                    </label>
+                    <br />
+                    <label>State:
+                        <select className="state-list" onChange={this.update("state")}>
+                            {this.states.map((state) => this.renderStateItem(state))}
+                        </select>
+                    </label>
+                    <br />
+                    <label>Latitude
+                        <input type="text" value={this.state.latitude} onChange={this.update("latitude")} />
+                    </label>
+                    <br />
+                    <label>longitude
+                        <input type="text" value={this.state.longitude} onChange={this.update("longitude")} />
                     </label>
                     <br />
                     <label>Fire Allowed:
