@@ -17,8 +17,3 @@ class AddSitesTable < ActiveRecord::Migration[5.2]
     add_index :sites, :user_id 
   end
 end
-
-
-
- s = Site.new(user_id: 14, name: "test", capacity: 5, fire_allowed: true, rv_allowed: false, pet_allowed: true, bike_activity: true, hike_activity: false, latitude: 5.555, longitude: 5.555, state: "CA")
- s = Site.new(user_id: 14, name: "test", capacity: 5, fire_allowed: true, rv_allowed: true, pet_allowed: true, bike_activity: true, hike_activity: true, latitude: 5.555, longitude: 5.555, state: "CA")
