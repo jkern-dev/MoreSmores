@@ -14,6 +14,7 @@ class Api::SitesController < ApplicationController
 
     def create 
         @site = Site.new(site_params)
+        debugger
         @site.user_id = current_user.id
         if @site.save
             render "api/sites/show"

@@ -9,7 +9,11 @@ import {
 
 import GreetingContainer from './greeting/greeting_container';
 import SitesIndexContainer from './sites/sites_index_container';
-import SiteFormContainer from './sites/sites_form_container';
+// import SiteFormContainer from './sites/sites_form_container';
+import SiteForm from './sites/site_create/site_form';
+import SiteLocation from './sites/site_create/site_location';
+import SiteActivities from './sites/site_create/site_activities';
+import SitePhoto from './sites/site_create/site_photo';
 import SiteShowContainer from './sites/site_show_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -44,7 +48,10 @@ const App = () => (
         <Switch>
             <Route path = "/sites/:id" component = {SiteShowContainer} />
             <Route exact path = "/sites/" component = {SitesIndexContainer} />
-            <ProtectedRoute exact path = "/site_create/" component = {SiteFormContainer} />
+            <ProtectedRoute exact path = "/site_create/" component = {SiteForm} />
+            <ProtectedRoute exact path = "/site_create/location" component = {SiteLocation} />
+            <ProtectedRoute exact path="/site_create/activities" component={SiteActivities} />
+            <ProtectedRoute exact path="/site_create/photo" component={SitePhoto} />
             <Route exact path="/" />
             <Redirect to="/" />
         </Switch>

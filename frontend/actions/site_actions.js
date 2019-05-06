@@ -2,6 +2,7 @@ import * as APIUtil from '../util/site_api_util';
 
 export const RECEIVE_ALL_SITES = "RECEIVE_ALL_SITES";
 export const RECEIVE_SITE = "RECEIVE_SITE";
+export const UPDATE_SITE_STATE = "UPDATE_SITE_STATE"
 
 
 const receiveSites = (sites) => ({
@@ -28,3 +29,15 @@ export const createSite = (site) => dispatch => (
     APIUtil.createSite(site)
         .then( site => dispatch(receiveSite(site)))
 )
+
+const updateSiteState = (key, value) => {
+    return {
+        type: UPDATE_SITE_STATE,
+        key,
+        value
+    }
+}
+
+export const updateSite = (key, value) => dispatch => {
+    return dispatch(updateSiteState(key, value))
+};
