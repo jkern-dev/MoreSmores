@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link} from 'react-router-dom';
-
+import SiteShow from './site_show';
 
 class SiteDetail extends React.Component {
     constructor (props) {
@@ -12,7 +12,7 @@ class SiteDetail extends React.Component {
         return (
             
             <div>
-                <Link to={`/sites/${this.props.site.id}`}>
+                <Link to={`/sites/${this.props.site.id}`}> 
                 <li className = "site-item">
                     <div>
                         <img src = {this.props.site.photoUrl} alt={this.props.site.name} />

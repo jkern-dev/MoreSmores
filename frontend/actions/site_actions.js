@@ -1,30 +1,30 @@
-import * as APIUtils from '../util/api_util';
+import * as APIUtil from '../util/site_api_util';
 
 export const RECEIVE_ALL_SITES = "RECEIVE_ALL_SITES";
 export const RECEIVE_SITE = "RECEIVE_SITE";
 
 
-export const receiveAllSites = sites => ({
-    type: RECEIVE_ALL_SITES,
-    sites
-});
+const receiveSites = (sites) => ({
+    sites: sites,
+    type: RECEIVE_ALL_SITES
+})
 
-export const requestAllSites = () => (dispatch) => (
-    APIUtils.fetchAllSites()
-        .then(sites => dispatch(receiveAllSites(sites)))
+export const fetchSites = () => (dispatch) => (
+    APIUtil.fetchSites()
+        .then(sites => dispatch(receiveSites(sites)))
 )
 
-export const receiveSite = site => ({
-    type: RECEIVE_SITE,
-    site
-});
+const receiveSite = (site) => ({
+    site: site,
+    type: RECEIVE_SITE
+})
 
-export const requestSite = siteId => (dispatch) => (
-    APIUtils.fetchSite(siteId)
+export const fetchSite = (id) => (dispatch) => (
+    APIUtil.fetchSite(id)
         .then(site => dispatch(receiveSite(site)))
-);
+)
 
-export const createSite = site => dispatch => (
-    APIUtils.createSite(site)
-        .then(site => dispatch(receiveSite(site)))
-);
+export const createSite = (site) => dispatch => (
+    APIUtil.createSite(site)
+        .then( site => dispatch(receiveSite(site)))
+)

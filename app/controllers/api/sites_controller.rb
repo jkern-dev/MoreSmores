@@ -14,6 +14,7 @@ class Api::SitesController < ApplicationController
 
     def create 
         @site = Site.new(site_params)
+        @site.user_id = current_user.id
         if @site.save
             render "api/sites/show"
         else
@@ -42,7 +43,7 @@ class Api::SitesController < ApplicationController
             :longitude,
             :state,
             :description,
-            photos: []
+            :photo
         )
     end
 end

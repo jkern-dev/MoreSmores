@@ -7,13 +7,12 @@ class SitesIndex extends React.Component {
     }
 
     componentDidMount () {
-        this.props.requestAllSites();
+        this.props.fetchSites();
     }
 
     render () {
         // const siteItems = this.props.sites.map(site => (<li>{site.name}</li>));
         const siteItems = this.props.sites.map(site => (<SiteDetail key={site.id} site = {site} />)) 
-        
         return(
                 <>
                     <ul className = "sites-list">

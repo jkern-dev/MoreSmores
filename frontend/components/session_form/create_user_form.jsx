@@ -21,13 +21,13 @@ class AccountForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-            .then(() => this.props.login(user))
+            // .then(() => this.props.login(user))
             .then(() => this.props.closeModal()) ;
     }
 
     renderStateItem(state) {
         return (
-            <option value={state}>{state}</option>
+            <option key={state} value={state}>{state}</option>
         )
     }
 
@@ -94,7 +94,6 @@ class AccountForm extends React.Component {
                         />
                         <br />
                         <p className="alternative">Already have an account? {this.props.otherForm}</p>
-                        
                         <input className="demo-button" type="submit" value={this.props.formType} />
                     </div>
                 </form>

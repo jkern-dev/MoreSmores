@@ -15,16 +15,17 @@ const mapStateToProps = state => {
             latitude: "",
             longitude: "",
             state: "",
-            description: ""
+            description: "",
+            photo: ""
         },
         formType: "Create Site"
     })
 }
 
 const mapDispatchToProps = dispatch => {
-    return ({
-        action: (site) => dispatch(createSite(site))
-    })
-}
+    return {
+        createSite: (site) => dispatch(createSite(site))
+    };
+};
 
 export default connect(mapStateToProps,mapDispatchToProps)(SiteForm)

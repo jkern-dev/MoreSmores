@@ -12,7 +12,7 @@ import SitesIndexContainer from './sites/sites_index_container';
 import SiteFormContainer from './sites/sites_form_container';
 import SiteShowContainer from './sites/site_show_container';
 
-// import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const splash_title = ["Find yourself outside.",
                         "Everywhere you want to camp.",
                         "It was in-tents.",
@@ -44,7 +44,7 @@ const App = () => (
         <Switch>
             <Route path = "/sites/:id" component = {SiteShowContainer} />
             <Route exact path = "/sites/" component = {SitesIndexContainer} />
-            <Route exact path = "/site_create/" component = {SiteFormContainer} />
+            <ProtectedRoute exact path = "/site_create/" component = {SiteFormContainer} />
             <Route exact path="/" />
             <Redirect to="/" />
         </Switch>

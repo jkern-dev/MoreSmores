@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatWithOptions } from 'util';
 
 class SiteForm extends React.Component {
     constructor(props) {
@@ -9,9 +10,6 @@ class SiteForm extends React.Component {
         this.states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'];
     }
 
-    
-
-
     update(field) {
         return e => this.setState({
             [field]: e.target.value
@@ -20,24 +18,39 @@ class SiteForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state);
-    }
-
-    renderStateItem(state) {
-        return (
-            <option value={state}>{state}</option>
-        )
+        const formData = new FormData();
+        formData.append('site[name]',this.state.name);
+        formData.append('site[description]', this.state.description);
+        formData.append('site[capacity]', this.state.capacity);
+        formData.append('site[fire_allowed]', this.state.fire_allowed);
+        formData.append('site[rv_allowed]', this.state.rv_allowed);
+        formData.append('site[pet_allowed]', this.state.pet_allowed);
+        formData.append('site[bike_activity]', this.state.bike_activity);
+        formData.append('site[hike_activity]', this.state.hike_activity);
+        formData.append('site[capacity]', this.state.capacity);
+        formData.append('site[latitude]', this.state.latitude);
+        formData.append('site[longitude]', this.state.longitude);
+        formData.append('site[state]', this.state.state);
+        formData.append('site[photo]', this.state.photoFile);
+        this.props.createSite(formData)
+            .then(this.props.history.push('/sites'));
     }
 
     handleFile(e) {
         const file = e.currentTarget.files[0];
         const fileReader = new FileReader();
         fileReader.onloadend = () => {
-            this.setState({photoFile: file, photoUrl: fileReader.result});
+            this.setState({ photoFile: file, photoUrl: fileReader.result });
         };
         if (file) {
             fileReader.readAsDataURL(file);
         }
+    }
+
+    renderStateItem(state) {
+        return (
+            <option key={state} value={state}>{state}</option>
+        )
     }
 
     render() {

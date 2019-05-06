@@ -3,12 +3,14 @@ import {merge} from 'lodash';
 
 const siteReducer = (state = {}, action) => {
     Object.freeze(state);
-
     switch(action.type) {
         case RECEIVE_ALL_SITES:
-            return merge({},state,action.sites);
+            // return merge({},state,action.sites);
+            return action.sites
         case RECEIVE_SITE:
-            return merge({}, state, action.site.sites);
+            let newState = merge({},state,{[action.site.id]: action.site});
+            return newState;
+            // return merge({}, state, action.site.sites);
         default: 
             return state;
     }

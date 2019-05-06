@@ -6,16 +6,16 @@ class SiteShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.requestSite(this.props.match.params.id);
+        this.props.fetchSite(this.props.match.params.id);
     }
 
     render() {
         let site = this.props.site; 
-        // why did I need to do line above rather than reference this.props.site.name 
         return(
             <>
                 <img src = {site.photoUrl}></img>
                 <h1>{site.name}</h1>
+                <p>{site.id}</p>
                 <p>{site.description}</p>
                 <div>
                     <h3>Essentials</h3>
