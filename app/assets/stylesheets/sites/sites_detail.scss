@@ -2,14 +2,14 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    width: 500px;
+    width: 300px;
 }
 
 
 .site-item {
     list-style: none;
     width: 200px;
-    display: block;
+    display: flex;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     img {
         height: 100%;
