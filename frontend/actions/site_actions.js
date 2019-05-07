@@ -2,8 +2,8 @@ import * as APIUtil from '../util/site_api_util';
 
 export const RECEIVE_ALL_SITES = "RECEIVE_ALL_SITES";
 export const RECEIVE_SITE = "RECEIVE_SITE";
-export const UPDATE_SITE_STATE = "UPDATE_SITE_STATE"
-
+export const UPDATE_SITE_STATE = "UPDATE_SITE_STATE";
+export const REMOVE_SITE = "REMOVE_SITE";
 
 const receiveSites = (sites) => ({
     sites: sites,
@@ -41,3 +41,16 @@ const updateSiteState = (key, value) => {
 export const updateSite = (key, value) => dispatch => {
     return dispatch(updateSiteState(key, value))
 };
+
+const removeSite = (site) => ({
+  site: site.id,
+  type: REMOVE_SITE
+})
+
+export const deleteSite = site => dispatch => {
+  return (
+    APIUtil.destroySite(site).then(site => dispatch(removeSite(site)))
+  )
+}
+  
+

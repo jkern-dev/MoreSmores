@@ -21,3 +21,18 @@ export const createSite = site => (
         processData: false
     })
 );
+
+export const updateSite = site => (
+  $.ajax({
+    method: 'PATCH',
+    url: `/api/sites/${site.id}`,
+    data: { site }
+  })
+);
+
+export const destroySite = id => {
+  return ($.ajax({
+    method: 'DELETE',
+    url: `/api/sites/${id}`
+  }))
+};

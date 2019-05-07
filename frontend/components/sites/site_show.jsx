@@ -10,9 +10,18 @@ class SiteShow extends React.Component {
     }
 
     render() {
+        const editButton = (
+          <>
+          <h1>Edit Site!</h1>
+          <button onClick={() => this.props.deleteSite(site.id).then(this.props.history.push('/sites'))}>Delete Site</button>
+          </>
+        );
+
         let site = this.props.site; 
+        const edit = (site.user_id === this.props.sessionId) ? editButton : <></>
         return(
             <>
+                {edit}
                 <img src = {site.photoUrl}></img>
                 <h1>{site.name}</h1>
                 <p>{site.description}</p>
@@ -21,7 +30,7 @@ class SiteShow extends React.Component {
                     <ul>
                         <li>{site.capacity} spots</li>
                     </ul> 
-                </div>
+                </div> 
             </>
         )
     }

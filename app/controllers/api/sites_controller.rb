@@ -5,11 +5,6 @@ class Api::SitesController < ApplicationController
 
     def show 
         @site = Site.find(params[:id])
-        # if @site
-        #     # render "api/sites/show"
-        # else
-        #     render json: @site.errors.full_messages, status: 422
-        # end
     end
 
     def create 
@@ -22,11 +17,20 @@ class Api::SitesController < ApplicationController
         end
     end
 
+    def update
+      @site = Site.find(params[:id])
+      if @site.update(site_params)
+          render "api/sites/show"
+      else
+        render json: @site.errors.full_messages, status: 422
+      end
+    end
+
     def destroy 
         @site = Site.find(params[:id])
         @site.destroy 
 
-        render :show 
+        render "api/sites/show"
     end
 
     private 

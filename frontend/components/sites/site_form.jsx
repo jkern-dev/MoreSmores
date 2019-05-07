@@ -1,5 +1,4 @@
 import React from 'react';
-import { formatWithOptions } from 'util';
 
 class SiteForm extends React.Component {
     constructor(props) {
