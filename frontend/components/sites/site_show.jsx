@@ -25,8 +25,6 @@ class SiteShow extends React.Component {
             </>
         )
     }
-
-
 }
 
 export default SiteShow;

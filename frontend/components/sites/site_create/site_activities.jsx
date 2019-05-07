@@ -25,33 +25,71 @@ class SiteActivities extends React.Component {
     }
 
     render() {
-        let next = <button onClick={this.nextForm}>Next</button>
+        let next = (
+          <button
+            className="site-button-complete"
+            onClick={this.nextForm}
+          >
+            Next
+          </button>
+        );
 
         return (
-            <>
-                <h2>What amentities are near your site?</h2>
-                <label>Fire Allowed:
-                        <input type="checkbox" value={this.state.fire_allowed} onChange={this.update("fire_allowed")} />
-                </label>
-                <br />
-                <label>RV Allowed:
-                        <input type="checkbox" value={this.state.rv_allowed} onChange={this.update("rv_allowed")} />
-                </label>
-                <br />
-                <label>Pets Allowed:
-                        <input type="checkbox" value={this.state.pet_allowed} onChange={this.update("pet_allowed")} />
-                </label>
-                <br />
-                <label>Hike Activity:
-                        <input type="checkbox" value={!this.state.hike_activity} onChange={this.update("hike_activity")} />
-                </label>
-                <br />
-                <label>Bike Activity:
-                        <input type="checkbox" value={!this.state.bike_activity} onChange={this.update("bike_activity")} />
-                </label>
-                {next}
-            </>
-        )
+          <div className="site-form">
+            <h2 className="site-header">What amentities are closeby?</h2>
+            <label className="site-input">
+              Campfires?
+              <input
+                type="checkbox"
+                className="site-input"
+                value={this.state.fire_allowed}
+                onChange={this.update("fire_allowed")}
+              />
+            </label>
+            <br />
+            <label className="site-input">
+              RV Parking?
+              <input
+                type="checkbox"
+                className="site-input"
+                value={this.state.rv_allowed}
+                onChange={this.update("rv_allowed")}
+              />
+            </label>
+            <br />
+            <label className="site-input">
+              Pets Encouraged?
+              <input
+                type="checkbox"
+                className="site-input"
+                value={this.state.pet_allowed}
+                onChange={this.update("pet_allowed")}
+              />
+            </label>
+            <br />
+            <label className="site-input">
+              Hiking?
+              <input
+                type="checkbox"
+                className="site-input"
+                value={!this.state.hike_activity}
+                onChange={this.update("hike_activity")}
+              />
+            </label>
+            <br />
+            <label className="site-input">
+              Biking?
+              <input
+                type="checkbox"
+                className="site-input"
+                value={!this.state.bike_activity}
+                onChange={this.update("bike_activity")}
+              />
+            </label>
+            <br />
+            {next}
+          </div>
+        );
 
     }
 }

@@ -25,34 +25,50 @@ class SiteForm extends React.Component {
 
     render() {
         let next;
-        if (this.state.name === undefined || this.state.description === undefined) {
-            next = <button >Not Done</button>
+        if (this.state.name === "" || this.state.description === "" || this.state.capacity <= 0) {
+            next = <button className = "site-button-incomplete">Not Done</button>
         } else {
-            next = <button onClick={this.nextForm}>Next</button>
+            next = <button className="site-button-complete" onClick={this.nextForm}>Next</button>
         }
 
         return (
-            <>
-                <h2>Give a Title and Description</h2>
-                <label>Title
-                    <input type="text" value={this.state.name} onChange={this.update("name")} />
-                </label>
-                <label>Description
-                    <textarea value={this.state.description} onChange={this.update("description")} />
-                </label>
-                <label>Capacity:
-                        <input type="number" value={this.state.capacity} min="0" onChange={this.update("capacity")} />
-                </label>
-                {next}
-            </>
-        )
+          <div className="site-form">
+            <h2 className="site-header">
+              Tell us about your site!
+            </h2>
+            <input
+              type="text"
+              className="site-input"
+              value={this.state.name}
+              onChange={this.update("name")}
+              placeholder="Site Name"
+            />
+            <textarea
+              value={this.state.description}
+              className="site-input"
+              onChange={this.update("description")}
+              placeholder="Site Description"
+            />
+            <label>Capacity</label>
+            <input
+              type="number"
+              className="site-cap"
+              value={this.state.capacity}
+              min="0"
+              onChange={this.update("capacity")}
+            />
+            <br />
+            {next}
+          </div>
+        );
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-
-        // nextPage: site.nextPage
+      name: "",
+      description: "",
+      capacity: 0
     };
 };
 

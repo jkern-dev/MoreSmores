@@ -31,29 +31,55 @@ class SiteLocation extends React.Component {
 
     render() {
         let next;
-        if (this.state.latitude === undefined || this.state.longitude === undefined || this.state.state === undefined) {
-            next = <button >Not Done</button>
+        if (this.state.latitude === "" || this.state.longitude === "" || this.state.state === "") {
+            next = (
+              <button className="site-button-incomplete">
+                Not Done
+              </button>
+            );
         } else {
-            next = <button onClick={this.onClick}>Next</button>
+            next = (
+              <button
+                className="site-button-complete"
+                onClick={this.onClick}
+              >
+                Next
+              </button>
+            );
         }
 
         return (
-            <>
-                <h2>Where is the site located?</h2>
-                <label>latitude
-                    <input type="text" value={this.state.latitude} onChange={this.update("latitude")} />
-                </label>
-                <label>longitude
-                    <input type="text" value={this.state.longitude} onChange={this.update("longitude")} />
-                </label>
-                <label>State:
-                        <select className="state-list" onChange={this.update("state")}>
-                        {this.states.map((state) => this.renderStateItem(state))}
-                    </select>
-                </label>
-                {next}
-            </>
-        )
+          <div className="site-form">
+            <h2 className="site-header">Where is your site?</h2>
+            <input
+              type="text"
+              placeholder="latitude"
+              className="site-input"
+              value={this.state.latitude}
+              onChange={this.update("latitude")}
+            />
+            <br />
+            <input
+              type="text"
+              placeholder="longitude"
+              className="site-input"
+              value={this.state.longitude}
+              onChange={this.update("longitude")}
+            />
+            <br />
+            <label>
+              State:
+              <select
+                className="state-list"
+                onChange={this.update("state")}
+              >
+                {this.states.map(state => this.renderStateItem(state))}
+              </select>
+            </label>
+            <br />
+            {next}
+          </div>
+        );
 
     }
 }

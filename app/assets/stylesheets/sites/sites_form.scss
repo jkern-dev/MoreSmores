@@ -1,0 +1,69 @@
+.site-form {
+  text-align: center;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background: #f2f2f2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.site-input {
+  width: 85%;
+  margin-bottom: 10px;
+  border-color: black;
+  border-width: 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+.site-input::placeholder {
+    font-weight: bolder;
+    color: black;
+    text-align: left;
+    // padding-left: 10px;
+}
+
+.site-cap {
+  width: 20px;
+  margin-bottom: 10px;
+  border-color: black;
+  border-width: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.site-button-incomplete {
+  width: 85%;
+  margin-bottom: 10px;
+  background-color:  #008060;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.site-button-complete {
+  width: 85%;
+  margin-bottom: 10px;
+  background-color: #00e6ac;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.site-file {
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.site-header {
+  margin-left: 10px;
+  margin-right: 10px;
+}

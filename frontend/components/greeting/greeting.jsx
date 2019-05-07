@@ -37,6 +37,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                             <li className="header-link">
                                 {currentUser.first_name.charAt(0).toUpperCase() + currentUser.first_name.slice(1)}
                                 <div className="dropdown-content">
+                                    {/* <Link className = "dropdown-content" to="/site_create/">Host</Link> */}
                                     <Link className="dropdown-content" to="#" onClick={logout}>Sign Out</Link>
                                 </div>
                             </li>

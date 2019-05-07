@@ -52,7 +52,14 @@ class SitePhoto extends React.Component {
     
 
     render() {
-        let next = <button onClick={this.nextForm}>Submit Site</button>
+        let next = (
+          <button
+            className="site-button-complete"
+            onClick={this.nextForm}
+          >
+            Submit Site
+          </button>
+        );
 
         const photoPreview = (
             <>
@@ -61,17 +68,17 @@ class SitePhoto extends React.Component {
             </>
         );
 
-        const preview = this.state.photoUrl ? photoPreview : <h3>Add a photo!</h3>;
+        const preview = this.state.photoUrl ? photoPreview : <p className="site-input">Photo Required!</p>;
 
         return (
-            <>
-                <h2>Attach a photo to complete your site!</h2>
+            <div className="site-form">
+                <h2 className="site-header">Add a photo to complete your site!</h2>
                 {preview}
                 <br />
-                <input type="file" onChange={this.handleFile} />
+                <input className="site-file" type="file" onChange={this.handleFile} />
                 <br />
                 {next}
-            </>
+            </div>
         )
 
     }
