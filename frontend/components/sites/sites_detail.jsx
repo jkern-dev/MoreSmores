@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter, Link} from 'react-router-dom';
-import SiteShow from './site_show';
 
 class SiteDetail extends React.Component {
     constructor (props) {
@@ -11,17 +10,28 @@ class SiteDetail extends React.Component {
 
     render () {
         return (
-            <div className = "site-item">
-                <Link to={`/sites/${this.props.site.id}`}> 
-                <li >
-                    <div className = "site-details">
-                        <img src = {this.props.site.photoUrl} alt={this.props.site.name} />
-                        <p className = "site-title">{this.props.site.name}</p>
-                        {/* <p>{this.props.site.description}</p> */}
+          <div className = "site-item">
+              <Link to={`/sites/${this.props.site.id}`}> 
+              <li>
+                <div className = "site-details">
+                  <div className = "site-image">
+                    <img src = {this.props.site.photoUrl} alt={this.props.site.name} />
+                  </div>
+                  <div className = "site-heading">
+                    <p className = "site-title">{this.props.site.name}</p>
+                  </div>
+                  <div className = "site-content" >
+                    <div className = "content-left">
+                      <p className = "site-subtitle">{this.props.site.city}, {this.props.site.state}</p>
                     </div>
-                </li>
-                </Link>
-            </div>
+                    <div className = "content-right">
+                      <p className = "site-price">${this.props.site.price}/Night</p>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            </Link>
+          </div>
         )
     }
 }

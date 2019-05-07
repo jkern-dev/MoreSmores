@@ -6,7 +6,7 @@ import { updateSite } from '../../../actions/site_actions';
 class SiteForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { name: this.props.name, description: this.props.description, capacity: this.props.capacity }
+        this.state = { name: this.props.name, description: this.props.description, capacity: this.props.capacity, price: this.props.price }
         this.nextForm = this.nextForm.bind(this)
     }
 
@@ -14,6 +14,7 @@ class SiteForm extends React.Component {
         this.props.updateSite("name", this.state.name)
         this.props.updateSite("description", this.state.description)
         this.props.updateSite("capacity", this.state.capacity)
+        this.props.updateSite("price", this.state.price)
         location.href = "/#/site_create/location"
     }
 
@@ -25,7 +26,7 @@ class SiteForm extends React.Component {
 
     render() {
         let next;
-        if (this.state.name === "" || this.state.description === "" || this.state.capacity <= 0) {
+        if (this.state.name === "" || this.state.description === "" || this.state.capacity <= 0 || this.state.price <= 0) {
             next = <button className = "site-button-incomplete">Not Done</button>
         } else {
             next = <button className="site-button-complete" onClick={this.nextForm}>Next</button>
@@ -49,13 +50,21 @@ class SiteForm extends React.Component {
               onChange={this.update("description")}
               placeholder="Site Description"
             />
-            <label>Capacity</label>
             <input
               type="number"
               className="site-cap"
-              value={this.state.capacity}
+              // value={this.state.capacity}
               min="0"
+              placeholder = "Capacity"
               onChange={this.update("capacity")}
+            />
+            <input
+              type="number"
+              className="site-cap"
+              // value={this.state.price}
+              min="0"
+              placeholder="Price Per Night"
+              onChange={this.update("price")}
             />
             <br />
             {next}
@@ -68,7 +77,8 @@ const mapStateToProps = (state) => {
     return {
       name: "",
       description: "",
-      capacity: 0
+      capacity: 0,
+      price: 0
     };
 };
 

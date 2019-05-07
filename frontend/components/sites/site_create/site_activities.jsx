@@ -5,16 +5,28 @@ import { connect } from 'react-redux';
 class SiteActivities extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { fire_allowed: false, rv_allowed: false, pet_allowed: false, bike_activity: false, hike_activity: false };
+        // this.state = { fire_allowed: false, rv_allowed: false, pet_allowed: false, bike_activity: false, hike_activity: false };
+        this.state = {arr: [
+                            {type:"hike_activity", active: false, title:"Hiking"},
+                            {type:"bike_activity", active: false, title:"Biking"},
+                            {type:"fire_allowed", active: false, title:"Campfire"},
+                            {type:"rv_allowed", active: false, title:"RV Parking"},
+                            {type:"pet_allowed", active: false, title: "Pets"}
+                          ]
+        }
         this.nextForm = this.nextForm.bind(this);
     }
 
     nextForm() {
-        this.props.updateSite("fire_allowed", this.state.fire_allowed)
-        this.props.updateSite("rv_allowed", this.state.rv_allowed)
-        this.props.updateSite("pet_allowed", this.state.pet_allowed)
-        this.props.updateSite("bike_activity", this.state.bike_activity)
-        this.props.updateSite("hike_activity", this.state.hike_activity)
+        // this.props.updateSite("fire_allowed", this.state.fire_allowed)
+        // this.props.updateSite("rv_allowed", this.state.rv_allowed)
+        // this.props.updateSite("pet_allowed", this.state.pet_allowed)
+        // this.props.updateSite("bike_activity", this.state.bike_activity)
+        // this.props.updateSite("hike_activity", this.state.hike_activity)
+
+        this.state.arr.map(act => {
+          this.props.updateSite(act.type, act.active);
+        })
         location.href = "/#/site_create/photo"
     }
 
@@ -22,6 +34,12 @@ class SiteActivities extends React.Component {
         return e => this.setState({
             [type]: !this.state[type]
         })
+    }
+
+    toggle(index) {
+      let arr = this.state.arr;
+      arr[index].active = !arr[index].active;
+      this.setState({arr: arr});
     }
 
     render() {
@@ -34,10 +52,18 @@ class SiteActivities extends React.Component {
           </button>
         );
 
+        let activities = this.state.arr.map( (act, i) => 
+          <div key={i} className={act.active ? "site-activity-green" : "site-activity-grey"} onClick={() => this.toggle(i)}><p>{act.title}</p></div>
+        )
+
         return (
           <div className="site-form">
+          
             <h2 className="site-header">What amentities are closeby?</h2>
-            <label className="site-input">
+            <div className = "site-options">
+              {activities}
+            </div>
+            {/* <label className="site-input">
               Campfires?
               <input
                 type="checkbox"
@@ -86,7 +112,7 @@ class SiteActivities extends React.Component {
                 onChange={this.update("bike_activity")}
               />
             </label>
-            <br />
+            <br /> */}
             {next}
           </div>
         );
@@ -99,9 +125,11 @@ const mapStateToProps = ({entities: {create}}) => {
         name: create.name,
         description: create.description,
         capacity: create.capacity,
+        price: create.price,
         latitude: create.latitude,
         longitude: create.longitude,
-        state: create.state
+        state: create.state,
+        city: create.city
     };
 };
 

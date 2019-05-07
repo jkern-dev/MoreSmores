@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 class SiteLocation extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { latitude: this.props.latitude, longitude: this.props.longitude, state: "" };
+        this.state = { latitude: "", longitude: "", state: "", city: "" };
         this.onClick = this.onClick.bind(this);
         this.states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'];
     }
@@ -14,6 +14,7 @@ class SiteLocation extends React.Component {
         this.props.updateSite("latitude", this.state.latitude)
         this.props.updateSite("longitude", this.state.longitude)
         this.props.updateSite("state", this.state.state)
+        this.props.updateSite("city", this.state.city)
         location.href = "/#/site_create/activities"
     }
 
@@ -31,7 +32,7 @@ class SiteLocation extends React.Component {
 
     render() {
         let next;
-        if (this.state.latitude === "" || this.state.longitude === "" || this.state.state === "") {
+        if (this.state.latitude === "" || this.state.longitude === "" || this.state.state === "" || this.state.city === "") {
             next = (
               <button className="site-button-incomplete">
                 Not Done
@@ -51,6 +52,23 @@ class SiteLocation extends React.Component {
         return (
           <div className="site-form">
             <h2 className="site-header">Where is your site?</h2>
+            <label>
+              State:
+              <select
+                className="state-list"
+                onChange={this.update("state")}
+              >
+                {this.states.map(state => this.renderStateItem(state))}
+              </select>
+            </label>
+            <input 
+              type="text"
+              placeholder="City"
+              className="site-input"
+              value={this.state.city}
+              onChange={this.update("city")}
+            />
+            <br />
             <input
               type="text"
               placeholder="latitude"
@@ -67,16 +85,6 @@ class SiteLocation extends React.Component {
               onChange={this.update("longitude")}
             />
             <br />
-            <label>
-              State:
-              <select
-                className="state-list"
-                onChange={this.update("state")}
-              >
-                {this.states.map(state => this.renderStateItem(state))}
-              </select>
-            </label>
-            <br />
             {next}
           </div>
         );
@@ -88,7 +96,8 @@ const mapStateToProps = ({entities: {create}}) => {
     return {
         name: create.name,
         description: create.description,
-        capacity: create.capacity
+        capacity: create.capacity,
+        price: create.price
     };
 };
 

@@ -30,6 +30,7 @@ class SitePhoto extends React.Component {
         formData.append('site[name]', this.props.name);
         formData.append('site[description]', this.props.description);
         formData.append('site[capacity]', this.props.capacity);
+        formData.append('site[price]', this.props.price);
         formData.append('site[fire_allowed]', this.props.fire_allowed);
         formData.append('site[rv_allowed]', this.props.rv_allowed);
         formData.append('site[pet_allowed]', this.props.pet_allowed);
@@ -39,6 +40,7 @@ class SitePhoto extends React.Component {
         formData.append('site[latitude]', this.props.latitude);
         formData.append('site[longitude]', this.props.longitude);
         formData.append('site[state]', this.props.state);
+        formData.append('site[city]', this.props.city);
         formData.append('site[photo]', this.state.photoFile);
         this.props.createSite(formData)
             .then(this.props.history.push('/sites'));
@@ -62,10 +64,10 @@ class SitePhoto extends React.Component {
         );
 
         const photoPreview = (
-            <>
+            <div className="photo-prev">
                 <h3>Photo Preview</h3>
                 <img src={this.state.photoUrl} />
-            </>
+          </div>
         );
 
         const preview = this.state.photoUrl ? photoPreview : <p className="site-input">Photo Required!</p>;
@@ -89,9 +91,11 @@ const mapStateToProps = ({entities: {create}}) => {
         name: create.name,
         description: create.description,
         capacity: create.capacity,
+        price: create.price,
         latitude: create.latitude,
         longitude: create.longitude,
         state: create.state,
+        city: create.city,
         bike_activity: create.bike_activity,
         fire_allowed: create.fire_allowed,
         hike_activity: create.hike_activity,

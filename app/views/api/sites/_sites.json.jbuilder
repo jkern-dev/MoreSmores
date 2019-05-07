@@ -1,2 +1,2 @@
-json.extract! site, :id, :user_id, :name, :description, :capacity, :fire_allowed, :rv_allowed, :pet_allowed, :bike_activity, :hike_activity, :latitude, :longitude, :state
+json.extract! site, :id, :user_id, :name, :description, :capacity, :fire_allowed, :rv_allowed, :pet_allowed, :bike_activity, :hike_activity, :latitude, :longitude, :state, :city, :price
 json.photoUrl url_for(site.photo)

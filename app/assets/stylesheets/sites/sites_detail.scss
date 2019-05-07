@@ -1,9 +1,9 @@
 .index-container {
     width: 95%;
     height: 100%;
-    border-style: solid;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .sites-list {
@@ -13,32 +13,68 @@
     width: 700px;
 }
 
-
 .site-item {
     list-style: none;
-    width: 325px;
+
+    width: 320px;
     height: 200px;
     display: block;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-right: 10px;
     margin-top: 10px;
-    img {
-        height: 100%;
-        width: 100%;
-        margin-bottom: -25px;
-    }
-    .site-title {
-        font-size: 25px;
-        font-weight: 400;
-        // margin-bottom: -10px;
-    }
-    p {
-        font-size: 15px;
-        font-weight: 400;
-    }
     a {
         text-decoration: none;
+    }
+    li {
+      height: 100%;
+    }
+}
+
+.site-details {
+  height: 100%;
+  display: block;
+    .site-content {
+      color: black;
+      display: flex;
+      width: 95%;
+      height: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+    }
+    .site-heading {
+      height: 25px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 95%;
+    }
+    .site-title {
+      font-size: 25px;
+      font-weight: 400;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1px;
+      color: black;
+    }
+    .site-subtitle {
+      font-size: 15px;
+      font-weight: 400;
+      margin: 0 auto;
+    }
+    .site-price {
+      font-size: 15px;
+      font-weight: 400;
+      margin: 0 auto;
+      color: black;
+    }
+}
+
+.site-image {
+  img {
+        width: 320px;
+        height: 100px;
+        margin: 0 auto;
     }
 }
 
@@ -47,5 +83,15 @@
     width: 400px;
     border-style: solid;
     height: 500px;
+}
+.content-left {
+  width: 50%;
+  height: 100%;
+}
+
+.content-right {
+  width: 50%;
+  height: 100%;
+  text-align: right;
 }
 

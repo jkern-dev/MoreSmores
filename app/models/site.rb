@@ -19,7 +19,7 @@
 #
 
 class Site < ApplicationRecord
-    validates :user_id, :name, :capacity, :latitude, :longitude, :state, presence: true
+    validates :user_id, :name, :capacity, :latitude, :longitude, :state, :city, :price, presence: true
 
     belongs_to :user
     has_one_attached :photo

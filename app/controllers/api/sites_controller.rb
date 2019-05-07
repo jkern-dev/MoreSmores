@@ -43,7 +43,9 @@ class Api::SitesController < ApplicationController
             :longitude,
             :state,
             :description,
-            :photo
+            :photo,
+            :city,
+            :price
         )
     end
 end
