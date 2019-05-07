@@ -9,6 +9,11 @@ class SiteDetail extends React.Component {
     // try to onLoad to delay rendering
 
     render () {
+      let photo = this.props.site.photoUrl;
+      if (photo === undefined) {
+        return null;
+      }
+
         return (
           <div className = "site-item">
               <Link to={`/sites/${this.props.site.id}`}> 
