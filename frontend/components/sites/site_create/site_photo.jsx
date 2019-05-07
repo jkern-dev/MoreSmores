@@ -104,7 +104,6 @@ const mapStateToProps = ({entities: {create}}) => {
     };
 };
 
-
 const mapDispatchToProps = dispatch => ({
     updateSite: (key, value) => dispatch(updateSite(key, value)),
     createSite: (site) => dispatch(createSite(site))

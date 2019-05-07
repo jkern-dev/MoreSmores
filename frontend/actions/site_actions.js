@@ -52,5 +52,10 @@ export const deleteSite = site => dispatch => {
     APIUtil.destroySite(site).then(site => dispatch(removeSite(site)))
   )
 }
+
+
+export const updateExistSite = (site) => dispatch => (
+  APIUtil.updateSite(site).then(site => dispatch(receiveSite(site)))
+);
   
 

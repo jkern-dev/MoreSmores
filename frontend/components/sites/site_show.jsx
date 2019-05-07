@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class SiteShow extends React.Component {
     constructor(props) {
@@ -12,7 +14,7 @@ class SiteShow extends React.Component {
     render() {
         const editButton = (
           <>
-          <h1>Edit Site!</h1>
+          <Link to={`/site_edit/${this.props.site.id}`}><h1>Edit Site!</h1></Link>
           <button onClick={() => this.props.deleteSite(site.id).then(this.props.history.push('/sites'))}>Delete Site</button>
           </>
         );

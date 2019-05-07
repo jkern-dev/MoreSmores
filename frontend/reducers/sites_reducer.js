@@ -7,7 +7,7 @@ const siteReducer = (state = {}, action) => {
         case RECEIVE_ALL_SITES:
             return action.sites
         case RECEIVE_SITE:
-            let newState = merge({},state,{[action.site.id]: action.site});
+            let newState = merge({},state,action.site);
             return newState;
         case REMOVE_SITE:
           newState = merge({}, state);

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestSite } from '../../actions/site_actions';
+import { fetchSite } from '../../actions/site_actions';
 import SiteDetail from './sites_detail';
 
 const mapStateToProps = (state, ownProps) => {
@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    requestSite: (id) => dispatch(requestSite(id))
+    fetchSite: (id) => dispatch(fetchSite(id))
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(SiteDetail);

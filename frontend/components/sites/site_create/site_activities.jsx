@@ -2,28 +2,30 @@ import React from 'react';
 import { updateSite } from '../../../actions/site_actions';
 import { connect } from 'react-redux';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFire, faHiking, faBicycle, faBus, faDog  } from '@fortawesome/free-solid-svg-icons';
+library.add(faFire);
+library.add(faHiking);
+library.add(faBicycle);
+library.add(faBus);
+library.add(faDog);
+
 class SiteActivities extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = { fire_allowed: false, rv_allowed: false, pet_allowed: false, bike_activity: false, hike_activity: false };
         this.state = {arr: [
-                            {type:"hike_activity", active: false, title:"Hiking"},
-                            {type:"bike_activity", active: false, title:"Biking"},
-                            {type:"fire_allowed", active: false, title:"Campfire"},
-                            {type:"rv_allowed", active: false, title:"RV Parking"},
-                            {type:"pet_allowed", active: false, title: "Pets"}
+                            {type:"hike_activity", active: false, icon:"hiking", title: "Hiking"},
+                            {type:"bike_activity", active: false, icon:"bicycle", title: "Biking"},
+                            {type:"fire_allowed", active: false, icon:"fire", title: "Campfire"},
+                            {type:"rv_allowed", active: false, icon:"bus", title: "RV Parking"},
+                            {type:"pet_allowed", active: false, icon: "dog", title: "Pets"}
                           ]
         }
         this.nextForm = this.nextForm.bind(this);
     }
 
     nextForm() {
-        // this.props.updateSite("fire_allowed", this.state.fire_allowed)
-        // this.props.updateSite("rv_allowed", this.state.rv_allowed)
-        // this.props.updateSite("pet_allowed", this.state.pet_allowed)
-        // this.props.updateSite("bike_activity", this.state.bike_activity)
-        // this.props.updateSite("hike_activity", this.state.hike_activity)
-
         this.state.arr.map(act => {
           this.props.updateSite(act.type, act.active);
         })
@@ -52,8 +54,9 @@ class SiteActivities extends React.Component {
           </button>
         );
 
+        // clean this function to read easier!
         let activities = this.state.arr.map( (act, i) => 
-          <div key={i} className={act.active ? "site-activity-green" : "site-activity-grey"} onClick={() => this.toggle(i)}><p>{act.title}</p></div>
+          <div key={i} className={act.active ? "site-activity-green" : "site-activity-grey"} onClick={() => this.toggle(i)}><span className="fire-icon"><span className="act-heading">{act.title}</span><FontAwesomeIcon icon={act.icon} /></span></div>
         )
 
         return (
