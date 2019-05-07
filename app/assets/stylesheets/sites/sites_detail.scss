@@ -1,17 +1,27 @@
+.index-container {
+    width: 95%;
+    height: 100%;
+    border-style: solid;
+    display: flex;
+    justify-content: space-between;
+}
+
 .sites-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     width: 700px;
 }
 
+
 .site-item {
     list-style: none;
-    width: 200px;
+    width: 325px;
+    height: 200px;
     display: block;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-right: 10px;
-    border-style: solid;
     margin-top: 10px;
     img {
         height: 100%;
@@ -21,7 +31,7 @@
     .site-title {
         font-size: 25px;
         font-weight: 400;
-        margin-bottom: -10px;
+        // margin-bottom: -10px;
     }
     p {
         font-size: 15px;
@@ -31,3 +41,11 @@
         text-decoration: none;
     }
 }
+
+.sites-map {
+    display: inline-block;
+    width: 400px;
+    border-style: solid;
+    height: 500px;
+}
+

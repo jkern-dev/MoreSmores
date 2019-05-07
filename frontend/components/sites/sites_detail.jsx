@@ -17,7 +17,7 @@ class SiteDetail extends React.Component {
                     <div className = "site-details">
                         <img src = {this.props.site.photoUrl} alt={this.props.site.name} />
                         <p className = "site-title">{this.props.site.name}</p>
-                        <p>{this.props.site.description}</p>
+                        {/* <p>{this.props.site.description}</p> */}
                     </div>
                 </li>
                 </Link>
