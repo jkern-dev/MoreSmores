@@ -15,7 +15,6 @@ class SiteShow extends React.Component {
             <>
                 <img src = {site.photoUrl}></img>
                 <h1>{site.name}</h1>
-                <p>{site.id}</p>
                 <p>{site.description}</p>
                 <div>
                     <h3>Essentials</h3>

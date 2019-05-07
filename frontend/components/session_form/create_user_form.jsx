@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 class AccountForm extends React.Component {
     constructor(props) {
@@ -35,7 +37,7 @@ class AccountForm extends React.Component {
         return (
             <ul className="form-errors-list">
                 {this.props.errors.map((error, i) => (
-                    <li className="form-errors" key={`error-${i}`}>{error}</li>
+                    <li className="form-errors" key={`error-${i}`}><FontAwesomeIcon icon="exclamation-triangle" size="sm" />{error}</li>
                 ))}
             </ul>
         );

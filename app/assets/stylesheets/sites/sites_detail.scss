@@ -1,22 +1,24 @@
 .sites-list {
-    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
-    width: 300px;
+    flex-wrap: wrap;
+    width: 700px;
 }
-
 
 .site-item {
     list-style: none;
     width: 200px;
-    display: flex;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: 10px;
+    border-style: solid;
+    margin-top: 10px;
     img {
         height: 100%;
         width: 100%;
         margin-bottom: -25px;
     }
-     .site-title {
+    .site-title {
         font-size: 25px;
         font-weight: 400;
         margin-bottom: -10px;
@@ -24,5 +26,8 @@
     p {
         font-size: 15px;
         font-weight: 400;
+    }
+    a {
+        text-decoration: none;
     }
 }

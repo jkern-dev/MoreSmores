@@ -7,14 +7,14 @@ class SiteDetail extends React.Component {
         super(props)
     }
 
+    // try to onLoad to delay rendering
 
     render () {
         return (
-            
-            <div>
+            <div className = "site-item">
                 <Link to={`/sites/${this.props.site.id}`}> 
-                <li className = "site-item">
-                    <div>
+                <li >
+                    <div className = "site-details">
                         <img src = {this.props.site.photoUrl} alt={this.props.site.name} />
                         <p className = "site-title">{this.props.site.name}</p>
                         <p>{this.props.site.description}</p>

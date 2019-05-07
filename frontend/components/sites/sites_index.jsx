@@ -11,15 +11,15 @@ class SitesIndex extends React.Component {
     }
 
     render () {
-        // const siteItems = this.props.sites.map(site => (<li>{site.name}</li>));
         const siteItems = this.props.sites.map(site => (<SiteDetail key={site.id} site = {site} />)) 
-        return(
-                <>
-                    <ul className = "sites-list">
-                            {siteItems}
-                    </ul>
-                </>
-        )
+        return (
+          <div className="sites-list">
+            <h3>The best camping around!</h3>
+            <div>
+              <ul className="sites-list">{siteItems}</ul>
+            </div>
+          </div>
+        );
     }
 }
 

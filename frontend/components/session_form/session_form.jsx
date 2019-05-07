@@ -1,5 +1,6 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -34,10 +35,16 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-        return(
-            <ul className = "form-errors-list">
+        return (
+            <ul className="form-errors-list">
                 {this.props.errors.map((error, i) => (
-                    <li className = "form-errors" key={`error-${i}`}>{error}</li>
+                <li className="form-errors" key={`error-${i}`}>
+                    <FontAwesomeIcon
+                    icon="exclamation-triangle"
+                    size="xs"
+                    />
+                    {error}
+                </li>
                 ))}
             </ul>
         );
