@@ -1,5 +1,6 @@
 import React from 'react';
 import SiteDetail from './sites_detail';
+import SiteMap from './site_map';
 
 class SitesIndex extends React.Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class SitesIndex extends React.Component {
                         </div>
                     </div>
                     <div className = "sites-map">
-                        <h1>Map Placeholder</h1>
+                        <SiteMap sites={this.props.sites} singleSite={false} />
                     </div>
                 </div>
             </>

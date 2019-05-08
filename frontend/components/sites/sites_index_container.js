@@ -8,7 +8,9 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => {
-    return {fetchSites: () => dispatch(fetchSites())}
+    return {
+      fetchSites: () => dispatch(fetchSites())
+    }
 };
 
 export default connect(mapStateToProps,mapDispatchToProps)(SitesIndex);
