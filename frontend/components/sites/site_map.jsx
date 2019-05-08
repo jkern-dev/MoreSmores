@@ -4,56 +4,47 @@ import { withRouter } from 'react-router-dom';
 
 import MarkerManager from "../../util/marker_manager";
 
-const getCoordObj = latLng => ({
-  lat: latLng.lat(),
-  lng: latLng.lng()
-});
-
-const mapOptions = {
-  center: {
-    lat: 37.773972,
-    lng: -122.431297
-  },
-  zoom: 13
-};
 
 class SiteMap extends React.Component {
   componentDidMount() {
-    const map = ReactDOM.findDOMNode(this.refs.map)
+    const mapOptions = {
+      center: {lat: 37.7758, lng:-122.435},
+      zoom: 13
+    };
+
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
-    if (this.props.singleSite) {
-      this.props.fetchSite(this.props.siteId);
-    } else {
-      this.registerListeners();
+    this.MarkerManager = new MarkerManager(this.map, this.handleClick.bind(this));
+    // this.addListeners = this.addListeners.bind(this);
+
+    this.MarkerManager.updateMarkers(this.props.sites);
+    // this.addListeners();
+    }
+
+    componentDidUpdate() {
       this.MarkerManager.updateMarkers(this.props.sites);
     }
-  }
 
-  registerListeners() {
-    google.maps.event.addListener(this.map, 'idle', () => {
-      const { north, south, east, west } = this.map.getBounds().toJSON();
-      const bounds = {
-        northEast: {lat: north, lng: east},
-        southWest: {lat: south, lng: west}
-      };
-    });
-    google.maps.event.addListener(this.map, 'click', (event) => {
-      const coords = getCoordsObj(event.latLng);
-      this.handleClick(coords);
-    });
-  }
+    // addListeners() {
+    //   google.maps.event.addListener(this.map, 'idle', () => {
+    //     const { north, south, east, west } = this.map.getBounds().toJSON();
+    //     const bounds = {
+    //       northEast: { lat: north, lng: east },
+    //       southWest: { lat: south, lng: west } };
+    //     this.props.updateFilter('bounds', bounds);
+    //   });
+    // }
 
-  handleMarkerClick(site) {
-    this.props.history.push(`/#/sites/${site.id}`);
-  }
+    handleClick(site) {
+      this.props.history.push(`/#/sites/${site.id}`);
+    }
+
   render() {
     return (
-      <div ref={map => this.mapNode = map}>
-      Map
-      </div>
+      <div className = "map" ref={ map => this.mapNode = map }></div>
     );
   }
-}
 
-export default withRouter(SiteMap);
+}
+  
+
+export default SiteMap;

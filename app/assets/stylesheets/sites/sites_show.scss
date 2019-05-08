@@ -1,0 +1,78 @@
+.site-show{
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  img {
+    width: 100%;
+    height: 450px;
+  }
+}
+
+.site-info {
+  width: 90%;
+  margin-left: 50px;
+  text-align: left;
+}
+
+.owner-options {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  margin-top: 25px;
+  a {
+    text-decoration: none;
+    color: grey;
+  }
+  .edit-button {
+    text-decoration: none;
+    color: grey;
+  }
+}
+
+.site-list {
+  list-style: none;
+  text-align: left;
+}
+
+.site-category{ 
+  text-align: center;
+}
+
+.site-lists {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.act-false {
+  color: grey;
+}
+
+.booking-box {
+  width: 400px;
+  height: auto;
+  margin-top: -70px;
+  border-style: solid;
+  border-color: grey;
+  .site-pricing {
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 15%;
+    p {
+      color: grey;
+    }
+  }
+}
+
+.booking-button {
+      // width: 85%;
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: #00e6ac;
+      font-size: 1.3rem;
+    }
+
+.line-break {
+  width: 100%;
+}

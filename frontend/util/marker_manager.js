@@ -5,7 +5,7 @@ class MarkerManager {
     this.markers = {};
   }
 
-  updateMarkers(sites){
+  updateMarkers(sites) {
     const sitesObj = {};
     sites.forEach(site => sitesObj[site.id] = site);
 

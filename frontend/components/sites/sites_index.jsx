@@ -1,6 +1,7 @@
 import React from 'react';
 import SiteDetail from './sites_detail';
 import SiteMap from './site_map';
+import MarkerManager from '../../util/marker_manager';
 
 class SitesIndex extends React.Component {
     constructor(props) {
@@ -9,6 +10,15 @@ class SitesIndex extends React.Component {
 
     componentDidMount () {
         this.props.fetchSites();
+
+        // maps related
+        const mapOptions = {
+          center: { lat: 37.7758, lng: -122.435 },
+          zoom: 10
+        };
+        this.map = new google.maps.Map(this.mapNode, mapOptions);
+        this.MarkerManager = new MarkerManager(this.map);
+        this.MarkerManager.updateMarkers(this.props.sites);
     }
 
     render () {
@@ -23,7 +33,7 @@ class SitesIndex extends React.Component {
                         </div>
                     </div>
                     <div className = "sites-map">
-                        <SiteMap sites={this.props.sites} singleSite={false} />
+                        <div className="sites-map" ref={map => this.mapNode = map }></div>
                     </div>
                 </div>
             </>
