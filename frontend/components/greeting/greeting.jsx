@@ -12,7 +12,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                 <nav className="header-nav">
                     <ul>
                         <li><Link to='/sites' className="header-link">Camp</Link></li>
-                        <li><Link to='/site_create/' className="header-link">Host</Link></li>
+                        <li><Link onClick={()=>openModal('login')} className="header-link">Host</Link></li>
                         <li ><Link to='/' className="header-link">Help</Link></li>
                         <li><Link onClick={() => openModal('login')} className="header-link">Login</Link></li>
                         <li><Link onClick={() => openModal('signup')} className="header-link">Sign Up</Link></li>

@@ -22,7 +22,6 @@ class SiteEditActivity extends React.Component {
   }
 
   finishEdit() {
-    debugger
     let newSite = this.state.site;
     this.state.arr.map(act => {
       newSite[act.type] = act.active

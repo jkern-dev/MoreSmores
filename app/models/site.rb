@@ -16,6 +16,9 @@
 #  state         :string           not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  description   :string           default(""), not null
+#  city          :string           default(""), not null
+#  price         :integer          default(0), not null
 #
 
 class Site < ApplicationRecord
@@ -23,5 +26,6 @@ class Site < ApplicationRecord
 
     belongs_to :user
     has_one_attached :photo
+    has_many :bookings
 
 end

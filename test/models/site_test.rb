@@ -16,6 +16,9 @@
 #  state         :string           not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  description   :string           default(""), not null
+#  city          :string           default(""), not null
+#  price         :integer          default(0), not null
 #
 
 require 'test_helper'

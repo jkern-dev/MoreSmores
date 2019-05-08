@@ -114,12 +114,16 @@ class SiteShow extends React.Component {
                   </ul>
                 </div>
                 <div className="booking-box">
-                  <div className = "site-pricing">
+                  <div className="site-pricing">
                     <h3>${site.price}</h3>
                     <p>Per Night</p>
-                    <hr className = "line-break"/>
-                    <div className = "book-button">
-                        <button className = "booking-button">Book Now!</button>
+                    <hr className="line-break" />
+                    <div className="book-button">
+                      <Link to={`/book_now/${site.id}`}>
+                        <button className="booking-button">
+                          Book Now!
+                        </button>
+                      </Link>
                     </div>
                   </div>
                   {edit}

@@ -24,6 +24,8 @@ import SiteEdit from "./sites/site_edit/site_edit_form";
 import SiteEditLocation from "./sites/site_edit/site_edit_location";
 import SiteEditActivity from "./sites/site_edit/site_edit_activity";
 
+//Booking Form
+import BookingContainer from './bookings/booking_container';
 
 import SiteShowContainer from './sites/site_show_container';
 import Splash from './splash';
@@ -36,6 +38,11 @@ const App = () => (
     <Switch>
       <Route path="/sites/:id" component={SiteShowContainer} />
       <Route exact path="/sites/" component={SitesIndexContainer} />
+      <ProtectedRoute
+        exact 
+        path='/book_now/:siteId'
+        component = {BookingContainer}
+      />
       <ProtectedRoute 
         exact 
         path="/site_create/" 
