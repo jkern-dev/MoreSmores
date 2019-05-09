@@ -53,7 +53,6 @@ class SiteForm extends React.Component {
             <input
               type="number"
               className="site-cap"
-              // value={this.state.capacity}
               min="0"
               placeholder = "Capacity"
               onChange={this.update("capacity")}
@@ -61,7 +60,6 @@ class SiteForm extends React.Component {
             <input
               type="number"
               className="site-cap"
-              // value={this.state.price}
               min="0"
               placeholder="Price Per Night"
               onChange={this.update("price")}

@@ -63,7 +63,8 @@ class SiteEditActivity extends React.Component {
       next =
         <>
           <button className="site-button-complete" onClick={this.finishEdit}>Finish Editing</button>
-          <button className="site-button-complete" onClick={this.nextForm}>Continue Editing</button>
+          {/* this next line should route to edit the photo for a site */}
+          {/* <button className="site-button-complete" onClick={this.finishEdit}>Finish Editing</button> */}
         </>
     }
     

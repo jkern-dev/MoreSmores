@@ -1,9 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-
-// import { DateRangePicker, DayPickerRangeController } from 'react-dates';
-
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +8,6 @@ class BookingForm extends React.Component {
       start_date: "",
       user_id: props.sessionId,
       site_id: props.location.pathname.split("/").pop(),
-      // site_id: props.match.params.siteId,
       end_date: "",
       total_price: 0,
       group_size: 1,
@@ -19,11 +15,6 @@ class BookingForm extends React.Component {
       reviewed: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentDidMount() {
-    // const siteId = this.props.location.pathname.split("/").pop();
-    // this.props.fetchSite(siteId);
   }
 
   update(field) {
@@ -35,10 +26,8 @@ class BookingForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const booking = Object.assign({}, this.state);
-    // booking.user_id = this.props.sessionId;
-    // booking.site_id = this.props.match.params.siteId;
     this.props.createBooking(booking)
-      // .then(() => this.props.history.push(`/#/sites/${this.props.match.params.siteId}`));
+      .then(() => this.props.closeModal());
   }
 
   handleDateChange(type) {
@@ -50,7 +39,6 @@ class BookingForm extends React.Component {
     const currentDate = new Date().toString();
 
     return (
-      // <h1>Booking Form</h1>
       <div className="booking-form">
         <form onSubmit={this.handleSubmit} className = "booking-content">
           <div className = "booking-head">

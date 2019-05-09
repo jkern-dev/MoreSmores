@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCampground, faBus, faDog, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
@@ -42,6 +41,10 @@ class SplashSearch extends React.Component {
     }
   };
 
+  submitSearch() {
+    location.href = '/#/sites'
+  }
+
   render(){
     return (
       <div className="search-box">
@@ -55,7 +58,7 @@ class SplashSearch extends React.Component {
           <div className="search-button" id="campsite" onClick={this.flipCamp}><FontAwesomeIcon icon="campground" /> Campsites</div>
           <div className="search-button" id="lodging" onClick={this.flipLodging}><FontAwesomeIcon icon="dog" /> Pets</div>
           <div className="search-button" id="rv" onClick={this.flipRv}><FontAwesomeIcon icon="bus" /> RVs</div>
-          <div className="search-submit">Search</div>
+          <div className="search-submit" onClick={this.submitSearch}>Search</div>
         </div>
       </div>
     );

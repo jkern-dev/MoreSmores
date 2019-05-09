@@ -1,6 +1,7 @@
 .site-form {
   text-align: center;
   width: 600px;
+  height: 500px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -8,6 +9,7 @@
   padding-top: 15px;
   padding-bottom: 15px;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -22,13 +24,14 @@
   padding-left: 10px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: bolder;
+  color: black;
 }
 
 .site-input::placeholder {
     font-weight: bolder;
     color: black;
     text-align: left;
-    // padding-left: 10px;
 }
 
 .site-cap {
@@ -36,11 +39,18 @@
   margin-top: 10px;
   border-color: black;
   border-width: 1px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  font-weight: bolder;
+  color: black;
+}
+
+.site-cap::placeholder {
+  font-weight: bolder;
+  color: black;
 }
 
 .form-price {
