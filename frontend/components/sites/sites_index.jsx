@@ -10,7 +10,6 @@ class SitesIndex extends React.Component {
 
     componentDidMount () {
         this.props.fetchSites();
-
         // maps related
         const mapOptions = {
           center: { lat: 37.7758, lng: -122.435 },

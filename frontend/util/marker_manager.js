@@ -6,7 +6,6 @@ class MarkerManager {
   }
 
   updateMarkers(sites) {
-    debugger
     const sitesObj = {};
     sites.forEach(site => sitesObj[site.id] = site);
 
