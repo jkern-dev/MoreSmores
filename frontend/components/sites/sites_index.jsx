@@ -1,6 +1,5 @@
 import React from 'react';
 import SiteDetail from './sites_detail';
-import SiteMap from './site_map';
 import MarkerManager from '../../util/marker_manager';
 
 class SitesIndex extends React.Component {
@@ -11,17 +10,24 @@ class SitesIndex extends React.Component {
     componentDidMount () {
         this.props.fetchSites();
         // maps related
-        const mapOptions = {
-          center: { lat: 37.7758, lng: -122.435 },
-          zoom: 10
-        };
-        this.map = new google.maps.Map(this.mapNode, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map);
-  
-        this.MarkerManager.updateMarkers(this.props.sites);
+        
+        
+        
+    }
+
+    componentDidUpdate() {
+      
+      const mapOptions = {
+        center: { lat: 37.7758, lng: -122.435 },
+        zoom: 10
+      };
+      this.map = new google.maps.Map(this.mapNode, mapOptions);
+      this.MarkerManager = new MarkerManager(this.map);
+      this.MarkerManager.updateMarkers(this.props.sites);
     }
 
     render () {
+      
         const siteItems = this.props.sites.map(site => (<SiteDetail key={site.id} site = {site} />)) 
         return (
             <div className = "index-body">

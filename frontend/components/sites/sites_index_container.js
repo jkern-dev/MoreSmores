@@ -4,7 +4,7 @@ import {fetchSites} from '../../actions/site_actions';
 import SitesIndex from './sites_index';
 
 const mapStateToProps = state => ({
-    sites: selectAllSites(state)   
+    sites: selectAllSites(state)
 })
 
 const mapDispatchToProps = dispatch => {

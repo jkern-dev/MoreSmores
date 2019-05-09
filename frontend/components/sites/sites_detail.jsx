@@ -6,8 +6,6 @@ class SiteDetail extends React.Component {
         super(props)
     }
 
-    // try to onLoad to delay rendering
-
     render () {
         return (
           <div className = "site-item">

@@ -1,6 +1,8 @@
 class Api::SitesController < ApplicationController
     def index 
-        @sites = Site.all
+        sleep 5  
+      @sites = Site.all
+
     end
 
     def show 
