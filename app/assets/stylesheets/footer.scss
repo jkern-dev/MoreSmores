@@ -1,0 +1,120 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.footer { 
+    height: 350px;
+    background-color: #412F5A;
+    background-image: asset_url('foot-mountains.png');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; 
+    padding-right: 150px; 
+}
+
+.footer-body {
+    position: top; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+.footer-title-div {
+    width:495px;
+}
+
+.footer-title {
+    color: #7f6b9b;
+    font-size: 18px; 
+}
+
+.footer-text {
+    position: bottom;
+    display: flex;
+    align-items: flex-start;
+    height: 25%;
+    width: 492px; 
+    font-family: "calibre", helvetica, sans-serif;
+    color: white; 
+    font-size: 14.4px; 
+    line-height: 1.5;
+}
+
+.icon-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100px;
+    height: auto;
+}
+
+.icon-links a {
+    color: white;
+    font-size: 18px;
+    padding-top: 10px;   
+}
+
+.icon-links a {
+    color: white; 
+    font-size: 14.4px; 
+    text-decoration: none; 
+}
+
+.icon-links a:hover {
+    color: #c59ac7 
+}
+
+.footer-bottom {
+    border-top: 5px solid #fde0ab;
+}
+
+.footer-icons {
+    margin-bottom: 150px;
+    margin-right: 50px; 
+}
+
+.bottom {
+    height: 18px;
+    padding: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3e7e96; 
+    color: white; 
+    font-size: 12.8px;
+    font-family: "calibre", helvetica, sans-serif;
+}
+
+.terms:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.social-title {
+    color: #7f6b9b;
+    font-size: 18px; 
+    font-family: "calibre", helvetica, sans-serif;
+}
+
+.about-title {
+    color: #7f6b9b;
+    font-size: 18px; 
+    font-family: "calibre", helvetica, sans-serif;
+}
+
+.about-title:hover {
+    color: #c59ac7;
+    cursor: pointer;
+}
+
+.fa-campground {
+    font-size: 10px;
+}

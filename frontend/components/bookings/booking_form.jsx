@@ -9,8 +9,8 @@ class BookingForm extends React.Component {
     super(props);
     this.state = {
       start_date: "",
-      user_id: props.sessionId,
-      site_id: props.match.params.siteId,
+      // user_id: props.sessionId,
+      // site_id: props.match.params.siteId,
       end_date: "",
       total_price: 0,
       group_size: 1,
@@ -21,7 +21,7 @@ class BookingForm extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchSite(this.props.match.params.siteId);
+    // this.props.fetchSite(this.props.match.params.siteId);
   }
 
   update(field) {
@@ -34,9 +34,9 @@ class BookingForm extends React.Component {
     e.preventDefault();
     const booking = Object.assign({}, this.state);
     booking.user_id = this.props.sessionId;
-    booking.site_id = this.props.match.params.siteId;
+    // booking.site_id = this.props.match.params.siteId;
     this.props.createBooking(booking)
-      .then(() => this.props.history.push(`/#/sites/${this.props.match.params.siteId}`));
+      // .then(() => this.props.history.push(`/#/sites/${this.props.match.params.siteId}`));
   }
 
   handleDateChange(type) {
@@ -44,15 +44,15 @@ class BookingForm extends React.Component {
   }
 
   render() {
-    const siteId = this.props.match.params.siteId;
-    const currSite = this.props.sites[siteId];
+    // const siteId = this.props.match.params.siteId;
+    // const currSite = this.props.sites[siteId];
     const currentDate = new Date().toString();
 
     return (
       // <h1>Booking Form</h1>
       <div className="booking-form">
         <form onSubmit={this.handleSubmit}>
-          ${currSite.price} Per Night
+          {/* ${currSite.price} Per Night */}
           <br />
           <label>
             Start Date:

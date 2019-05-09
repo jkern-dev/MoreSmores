@@ -12,6 +12,7 @@ library.add(faExclamationTriangle);
 
 import GreetingContainer from './greeting/greeting_container';
 import SitesIndexContainer from './sites/sites_index_container';
+import Footer from './footer';
 
 // Create Site Form
 import SiteForm from './sites/site_create/site_form';
@@ -33,21 +34,17 @@ import Splash from './splash';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <>
+  <div className="body">
     <GreetingContainer />
     <Switch>
       <Route path="/sites/:id" component={SiteShowContainer} />
       <Route exact path="/sites/" component={SitesIndexContainer} />
       <ProtectedRoute
-        exact 
-        path='/book_now/:siteId'
-        component = {BookingContainer}
+        exact
+        path="/book_now/:siteId"
+        component={BookingContainer}
       />
-      <ProtectedRoute 
-        exact 
-        path="/site_create/" 
-        component={SiteForm} 
-      />
+      <ProtectedRoute exact path="/site_create/" component={SiteForm} />
       <ProtectedRoute
         exact
         path="/site_create/location"
@@ -58,30 +55,25 @@ const App = () => (
         path="/site_create/activities"
         component={SiteActivities}
       />
-      <ProtectedRoute 
-        exact 
-        path="/site_create/photo" 
-        component={SitePhoto} 
-      />
-      <ProtectedRoute 
-        exact 
-        path='/site_edit/:siteId'
-        component={SiteEdit}
-      />
+      <ProtectedRoute exact path="/site_create/photo" component={SitePhoto} />
+      <ProtectedRoute exact path="/site_edit/:siteId" component={SiteEdit} />
       <ProtectedRoute
         exact
-        path='/site_edit_location/:siteId'
+        path="/site_edit_location/:siteId"
         component={SiteEditLocation}
       />
       <ProtectedRoute
         exact
-        path='/site_edit_activity/:siteId'
+        path="/site_edit_activity/:siteId"
         component={SiteEditActivity}
-      />      
+      />
       <Route exact path="/" component={Splash} />
       <Redirect to="/" />
     </Switch>
-  </>
+    <div>
+      <Footer />
+    </div>
+  </div>
 );
 
 export default App;

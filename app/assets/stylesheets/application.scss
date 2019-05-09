@@ -2,11 +2,11 @@
 @import "./sites/sites_detail";
 @import "./sites/sites_form";
 @import "./sites/sites_show";
+@import "./footer";
 
 * {
     font-family: sans-serif;
 }
-
 
 .header {
     width: 95%;
@@ -23,7 +23,6 @@
 
 .not-found {
     margin: 0 auto;
-    
 } 
 .header-nav {
     display: flex;

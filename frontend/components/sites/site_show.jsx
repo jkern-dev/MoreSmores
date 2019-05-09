@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Modal from '../modal';
 
 // icons
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -119,11 +120,14 @@ class SiteShow extends React.Component {
                     <p>Per Night</p>
                     <hr className="line-break" />
                     <div className="book-button">
-                      <Link to={`/book_now/${site.id}`}>
-                        <button className="booking-button">
-                          Book Now!
-                        </button>
-                      </Link>
+                      {/* <Link to={`/book_now/${site.id}`}> */}
+                      <button
+                        onClick={() => this.props.openModal("booking")}
+                        className="booking-button"
+                      >
+                        Book Now!
+                      </button>
+                      {/* </Link> */}
                     </div>
                   </div>
                   {edit}
