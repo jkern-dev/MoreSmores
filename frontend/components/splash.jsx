@@ -1,5 +1,5 @@
 import React from 'react';
-
+import SplashSearch from "./search/search_splash";
 
 const Splash = () => {
     const splash_title = [
@@ -23,17 +23,23 @@ const Splash = () => {
     const random_splash = splash_title[Math.floor(Math.random() * splash_title.length)];
 
     return (
+      <>
         <div className="splash-content">
-            <span className="splash-title">
+          <span className="splash-title">
             <h2>{random_splash}</h2>
-            </span>
-            <div className="splash-body">
+          </span>
+          <div className="splash-body">
             <p>
-                Book unique camping experiences on over <strong>300,000</strong>{" "}
-                campsites, ranches, vineyards, public parks and more.
+              Book unique camping experiences on over{" "}
+              <strong>300,000</strong> campsites, ranches, vineyards, public
+              parks and more.
             </p>
-            </div>
+          </div>
         </div>
+        <div className="search-content">
+          <SplashSearch />
+        </div>
+      </>
     );
 }
 

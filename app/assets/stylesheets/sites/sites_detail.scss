@@ -1,8 +1,16 @@
+.index-body {
+  width: 75%;
+  margin: 0 auto;
+  h3 {
+    margin-left: 95px;
+  }
+}
+
 .index-container {
-    width: 95%;
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0 auto;
 }
 
@@ -15,9 +23,8 @@
 
 .site-item {
     list-style: none;
-
     width: 320px;
-    height: 200px;
+    height: 220px;
     display: block;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -45,6 +52,7 @@
     }
     .site-heading {
       height: 25px;
+      margin-top: 10px;
       margin-left: auto;
       margin-right: auto;
       width: 95%;
@@ -81,8 +89,7 @@
 .sites-map {
     display: inline-block;
     width: 400px;
-    border-style: solid;
-    height: 500px;
+    height: 600px;
 }
 .content-left {
   width: 50%;

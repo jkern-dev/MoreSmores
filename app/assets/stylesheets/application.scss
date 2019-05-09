@@ -3,6 +3,8 @@
 @import "./sites/sites_form";
 @import "./sites/sites_show";
 @import "./footer";
+@import "./search";
+
 
 * {
     font-family: sans-serif;
@@ -84,6 +86,8 @@
 .splash-content {
     width: 60%;
     margin-left: 10%;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .splash-title {

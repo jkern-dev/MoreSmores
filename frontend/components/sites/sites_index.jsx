@@ -24,7 +24,7 @@ class SitesIndex extends React.Component {
     render () {
         const siteItems = this.props.sites.map(site => (<SiteDetail key={site.id} site = {site} />)) 
         return (
-            <>
+            <div className = "index-body">
                 <h3>The best camping around!</h3>
                 <div className = "index-container">
                     <div >
@@ -36,7 +36,7 @@ class SitesIndex extends React.Component {
                         <div className="sites-map" ref={map => this.mapNode = map }></div>
                     </div>
                 </div>
-            </>
+            </div>
         );
     }
 }
