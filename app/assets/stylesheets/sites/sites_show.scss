@@ -4,7 +4,7 @@
   text-align: center;
   img {
     width: 100%;
-    height: 450px;
+    height: 500px;
   }
 }
 
@@ -12,6 +12,11 @@
   width: 90%;
   margin-left: 50px;
   text-align: left;
+}
+
+.site-heading {
+  // border-style: solid;
+  width: 55%;
 }
 
 .owner-options {
@@ -32,10 +37,16 @@
 .site-list {
   list-style: none;
   text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  li {
+    margin-left: -30px;
+  }
 }
 
 .site-category{ 
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .site-lists {
@@ -50,8 +61,8 @@
 
 .booking-box {
   width: 400px;
-  height: auto;
-  margin-top: -70px;
+  height: 200px;
+  margin-top: -90px;
   border-style: solid;
   border-color: grey;
   .site-pricing {

@@ -3,10 +3,12 @@ import React from 'react';
 // icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faLinkedin } from "@fortawesome/free-solid-svg-icons";
-// library.add(faLinkedin);
-// library.add(faLinkedin);
-// library.add(faCampground);
+import {  faCampground } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons"
+
+library.add(faLinkedin);
+library.add(faGithub);
+library.add(faCampground);
 
 class Footer extends React.Component {
   render() {
@@ -18,12 +20,12 @@ class Footer extends React.Component {
             <br />
             <div className="icon-links">
               <a href="https://github.com/jkern-dev">
-                <FontAwesomeIcon icon="campground" /> Github
+                <FontAwesomeIcon icon={['fab', 'github']} /> Github
               </a>
-              <a href="www.linkedin.com">
-                <FontAwesomeIcon icon="campground" /> LinkedIn
+              <a href="https://www.linkedin.com/in/jkern620/">
+                <FontAwesomeIcon icon={['fab', 'linkedin']} /> LinkedIn
               </a>
-              <a href="www.hipcamp.com">
+              <a href="https://www.hipcamp.com">
                 <FontAwesomeIcon icon="campground" /> HipCamp
               </a>
             </div>

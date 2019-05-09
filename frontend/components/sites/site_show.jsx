@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Modal from '../modal';
 
 // icons
@@ -48,8 +48,10 @@ class SiteShow extends React.Component {
           <div className="site-show">
             <img src={site.photoUrl} />
             <div className="site-info">
-              <h1>{site.name}</h1>
-              <p>{site.description}</p>
+              <div className = "site-heading">
+                <h1>{site.name}</h1>
+                <p>{site.description}</p>
+              </div>
               <div className="site-lists">
                 <div className="site-category">
                   <h3>Essentials</h3>
@@ -139,4 +141,4 @@ class SiteShow extends React.Component {
     }
 }
 
-export default SiteShow;
+export default withRouter(SiteShow);

@@ -38,6 +38,16 @@
   text-align: center;
 }
 
+.search-button-active {
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  padding: 20px 80px 20px 80px;
+  text-align: center;
+  background: #00e6ac;
+  color: white;
+}
+
 .search-submit {
   border-width: 1px;
   padding: 20px 80px 20px 80px;

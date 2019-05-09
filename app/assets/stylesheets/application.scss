@@ -4,6 +4,7 @@
 @import "./sites/sites_show";
 @import "./footer";
 @import "./search";
+@import "./booking/booking_form";
 
 
 * {
@@ -74,7 +75,8 @@
     left: 50%;
     border-radius: 3px;
     transform: translate(-50%,-50%);
-    width: 350px;
+    // width: 350px;
+    width: auto;
     margin: 0 auto;
     margin-top: 50px;
     text-align: center;
