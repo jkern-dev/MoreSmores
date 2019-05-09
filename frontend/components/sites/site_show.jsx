@@ -42,8 +42,32 @@ class SiteShow extends React.Component {
           </div>
         );
 
+        const bookButton = (
+          <div className="book-button">
+            <button
+              onClick={() => this.props.openModal("booking")}
+              className="booking-button"
+            >
+              Book Now!
+            </button>
+          </div>
+        )
+
+        const unauthbookButton = (
+          <div className="book-button">
+            <button
+              onClick={() => this.props.openModal("login")}
+              className="booking-button"
+            >
+              Book Now!
+            </button>
+          </div>
+        )
+
+
         let site = this.props.site; 
         const edit = (site.user_id === this.props.sessionId) ? editButton : <></>
+        const book = (this.props.sessionId===undefined) ? unauthbookButton: bookButton
         return (
           <div className="site-show">
             <img src={site.photoUrl} />
@@ -142,3 +166,5 @@ class SiteShow extends React.Component {
 }
 
 export default withRouter(SiteShow);
+
+

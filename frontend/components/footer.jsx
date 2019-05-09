@@ -65,12 +65,12 @@ class Footer extends React.Component {
             </section>
           </div>
         </footer>
-        <footer className="footer-bottom">
+        {/* <footer className="footer-bottom">
           <section className="bottom">
             <p>Built in Palo Alto</p>
             <p className="terms">Terms of Service</p>
           </section>
-        </footer>
+        </footer> */}
       </>
     );
   }
