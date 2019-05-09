@@ -9,10 +9,6 @@ class SitesIndex extends React.Component {
 
     componentDidMount () {
         this.props.fetchSites();
-        // maps related
-        
-        
-        
     }
 
     componentDidUpdate() {
