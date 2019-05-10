@@ -15,6 +15,7 @@ html, body {
     flex-direction: row-reverse;
     align-items: center; 
     padding-right: 150px; 
+    padding-left: 150px;
 }
 
 .footer-body {
@@ -23,9 +24,10 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-around; 
-    align-items: center;
+    align-items: left;
     margin-top: 20px;
     margin-bottom: 150px;
+    // margin-left: 50px;
 }
 
 .footer-title-div {
@@ -59,44 +61,19 @@ html, body {
 
 .icon-links a {
     color: white;
-    font-size: 18px;
+    font-size: 14.4px;
     padding-top: 10px;   
-}
-
-.icon-links a {
-    color: white; 
-    font-size: 14.4px; 
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .icon-links a:hover {
-    color: #c59ac7 
+    color: #7f6b9b;
 }
 
-.footer-bottom {
-    border-top: 5px solid #fde0ab;
-}
 
 .footer-icons {
     margin-bottom: 150px;
     margin-right: 50px; 
-}
-
-.bottom {
-    height: 18px;
-    padding: 10px; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3e7e96; 
-    color: white; 
-    font-size: 12.8px;
-    font-family: "calibre", helvetica, sans-serif;
-}
-
-.terms:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 .social-title {
@@ -105,16 +82,6 @@ html, body {
     font-family: "calibre", helvetica, sans-serif;
 }
 
-.about-title {
-    color: #7f6b9b;
-    font-size: 18px; 
-    font-family: "calibre", helvetica, sans-serif;
-}
-
-.about-title:hover {
-    color: #c59ac7;
-    cursor: pointer;
-}
 
 .fa-campground {
     font-size: 10px;
