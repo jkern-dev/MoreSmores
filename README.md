@@ -21,12 +21,15 @@ bundle exec rails server
 
 ## Future Additions
 
-Refine search bar to enable sites to be searched by name and with various filters
+* Refine search bar to enable sites to be searched by name and with various filters
 
-Update site creation form to allow address entry for site location rather than inputting longitude and latitude directly
+* Update site creation form to allow address entry for site location rather than inputting longitude and latitude directly
 
-Users that have booked a site enabled to place a review to have listed on a sites detail page 
+* Users that have booked a site enabled to place a review to have listed on a sites detail page 
 
+* Update styling for dynamic display sizes
+
+* Pagination to site index page
 
 
 
