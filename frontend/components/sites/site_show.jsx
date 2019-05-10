@@ -67,7 +67,7 @@ class SiteShow extends React.Component {
 
         let site = this.props.site; 
         const edit = (site.user_id === this.props.sessionId) ? editButton : <></>
-        const book = (this.props.sessionId===undefined) ? unauthbookButton: bookButton
+        const book = (this.props.sessionId===null) ? unauthbookButton: bookButton
         return (
           <div className="site-show">
             <img src={site.photoUrl} />
@@ -145,16 +145,15 @@ class SiteShow extends React.Component {
                     <h3>${site.price}</h3>
                     <p>Per Night</p>
                     <hr className="line-break" />
-                    <div className="book-button">
-                      {/* <Link to={`/book_now/${site.id}`}> */}
+                    {/* <div className="book-button">
                       <button
                         onClick={() => this.props.openModal("booking")}
                         className="booking-button"
                       >
                         Book Now!
                       </button>
-                      {/* </Link> */}
-                    </div>
+                    </div> */}
+                    {book}
                   </div>
                   {edit}
                 </div>
