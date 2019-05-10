@@ -1,24 +1,22 @@
-# README
+## More S'mores
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+More S'mores is a clone of the camping app HipCamp. More S'mores allows users to find camp and reserve camping sites. Additionally users can place their own property as camp sites and control reservations to their camp sites. Every site lists their various amenities such as allowing pets or to park an RV, enabling users to search and find camp sites by their preference.
 
-Things you may want to cover:
+## Install
+```` bash
+npm install
+bundle install
+````
 
-* Ruby version
+Create and initialize database 
+```` bash
+bundle exec rails db:setup
+````
 
-* System dependencies
+Launch site
+```` bash
+npm start
+bundle exec rails server
+````
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
