@@ -15,30 +15,30 @@ class Footer extends React.Component {
     return (
       <>
         <footer className="footer">
-          <div className="footer-icons">
-            <section className="social-title">Social</section>
+          <div className="footer-list">
+            <section className="social">Social</section>
             <br />
-            <div className="icon-links">
+            <div className="list-links">
               <a href="https://github.com/jkern-dev">
-                <FontAwesomeIcon icon={['fab', 'github']} /> Github
+                <FontAwesomeIcon icon={["fab", "github"]} /> Github
               </a>
               <a href="https://www.linkedin.com/in/jkern620/">
-                <FontAwesomeIcon icon={['fab', 'linkedin']} /> LinkedIn
+                <FontAwesomeIcon icon={["fab", "linkedin"]} /> LinkedIn
               </a>
               <a href="https://www.hipcamp.com">
                 <FontAwesomeIcon icon="campground" /> HipCamp
               </a>
             </div>
           </div>
-          <div className="footer-body">
-            <div className="footer-title-div">
+          <div className="footer-main">
+            <div className="footer-heading">
               <section className="footer-title">
                 MoreS'mores is everywhere you want to camp!
               </section>
             </div>
             <br />
             <br />
-            <section className="footer-text">
+            <section className="footer-body">
               Discover unique experiences on ranches, nature preserves,
               farms, vineyards, and public campgrounds across the U.S. Book
               tent camping, treehouses, cabins, yurts, primitive backcountry

@@ -14,44 +14,41 @@ html, body {
     display: flex;
     flex-direction: row-reverse;
     align-items: center; 
-    padding-right: 150px; 
-    padding-left: 150px;
+    padding-right: 125px; 
+    padding-left: 125px;
 }
 
-.footer-body {
+.footer-main {
     position: top; 
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around; 
     align-items: left;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 150px;
-    // margin-left: 50px;
 }
 
-.footer-title-div {
-    width:495px;
+.footer-heading {
+    width: 500px;
 }
 
 .footer-title {
     color: #7f6b9b;
-    font-size: 18px; 
+    font-size: 20px; 
 }
 
-.footer-text {
+.footer-body {
     position: bottom;
     display: flex;
     align-items: flex-start;
-    height: 25%;
-    width: 492px; 
-    font-family: "calibre", helvetica, sans-serif;
+    width: 450px; 
     color: white; 
-    font-size: 14.4px; 
-    line-height: 1.5;
+    font-size: 15px; 
+    line-height: 1.2;
 }
 
-.icon-links {
+.list-links {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -59,30 +56,24 @@ html, body {
     height: auto;
 }
 
-.icon-links a {
+.list-links a {
     color: white;
-    font-size: 14.4px;
-    padding-top: 10px;   
+    font-size: 15px;
+    line-height: 1.5; 
     text-decoration: none;
 }
 
-.icon-links a:hover {
+.list-links a:hover {
     color: #7f6b9b;
 }
 
 
-.footer-icons {
+.footer-list {
     margin-bottom: 150px;
     margin-right: 50px; 
 }
 
-.social-title {
+.social {
     color: #7f6b9b;
     font-size: 18px; 
-    font-family: "calibre", helvetica, sans-serif;
-}
-
-
-.fa-campground {
-    font-size: 10px;
 }
