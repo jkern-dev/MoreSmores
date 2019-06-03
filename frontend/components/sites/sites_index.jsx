@@ -23,7 +23,6 @@ class SitesIndex extends React.Component {
     }
 
     render () {
-      
         const siteItems = this.props.sites.map(site => (<SiteDetail key={site.id} site = {site} />)) 
         return (
             <div className = "index-body">

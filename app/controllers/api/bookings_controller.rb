@@ -25,8 +25,12 @@ class Api::BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
-    @booking.destroy 
-    render "api/bookings/show"
+    if @booking
+      @booking.destroy 
+      render "api/bookings/show"
+    else
+      render json:["Unable to delete booking"], status:401
+    end
   end
 
   private 
