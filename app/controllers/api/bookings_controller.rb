@@ -12,6 +12,7 @@ class Api::BookingsController < ApplicationController
 
   def index
     @bookings = current_user.bookings
+    # @bookings = Booking.find_by(user_id: current_user.id)
   end
 
   def update 

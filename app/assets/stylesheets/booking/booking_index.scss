@@ -1,0 +1,24 @@
+.booking-detail {
+  border-style: solid;
+  padding-bottom: 10px;
+  list-style: none;
+  height: 450px;
+  width: 700px;
+  
+}
+
+.booking-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.booking-image {
+  width: 400px;
+  height: 400px;
+}
+
+.booking-dates {
+  margin-left: 100px;
+}
+

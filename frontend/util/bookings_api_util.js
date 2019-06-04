@@ -1,9 +1,9 @@
-export const fetchBookings = () => (
-  $.ajax({
+export const fetchBookings = () => {
+  return $.ajax({
     method: "GET",
     url: "/api/bookings"
   })
-);
+};
 
 export const createBooking = booking => {
   return $.ajax({

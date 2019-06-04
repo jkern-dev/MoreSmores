@@ -26,8 +26,8 @@ export const deleteBooking = bookingId => dispatch => (
 )
 
 export const receiveAllBookings = bookings => ({
-  type: RECEIVE_ALL_BOOKINGS,
-  bookings
+  bookings: bookings,
+  type: RECEIVE_ALL_BOOKINGS
 });
 
 export const requestAllBookings = () => dispatch => (
