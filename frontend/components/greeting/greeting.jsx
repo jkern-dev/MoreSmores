@@ -13,7 +13,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                     <ul>
                         <li><Link to='/sites' className="header-link">Camp</Link></li>
                         <li><Link onClick={()=>openModal('login')} className="header-link">Host</Link></li>
-                        <li ><Link to='/' className="header-link">Help</Link></li>
+                        {/* <li ><Link to='/' className="header-link">Help</Link></li> */}
                         <li><Link onClick={() => openModal('login')} className="header-link">Login</Link></li>
                         <li><Link onClick={() => openModal('signup')} className="header-link">Sign Up</Link></li>
                     </ul>
@@ -27,12 +27,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <Modal />
             <header className="header">
                 <span ><Link to="/" ><img src={window.logo} className="logo" /></Link></span>
-
                 <nav className="header-nav">
                     <ul>
                         <li><Link to='/sites' className="header-link">Camp</Link></li>
                         <li><Link to='/site_create' className="header-link">Host</Link></li>
-                        <li ><Link to='/' className="header-link">Help</Link></li>
+                        {/* <li ><Link to='/' className="header-link">Help</Link></li> */}
                         <div className="dropdown">
                           <li className="header-link">
                             <Link to= {`/bookings/${currentUser.id}`} className="header-link">  
