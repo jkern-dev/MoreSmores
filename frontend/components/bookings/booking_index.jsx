@@ -20,7 +20,7 @@ class BookingIndex extends React.Component {
   render() {
     const bookingItems = this.props.bookings.map(booking => (<BookingDetail key={booking.id} booking={booking} />))
     return (
-      <div>
+      <div className = "bookings">
         <h1>Your Bookings</h1>
         <ul>{bookingItems}</ul>
       </div>

@@ -31,14 +31,12 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                     <ul>
                         <li><Link to='/sites' className="header-link">Camp</Link></li>
                         <li><Link to='/site_create' className="header-link">Host</Link></li>
+                        <li><Link to={`/bookings/${currentUser.id}`} className="header-link">Bookings</Link></li>
                         {/* <li ><Link to='/' className="header-link">Help</Link></li> */}
                         <div className="dropdown">
                           <li className="header-link">
-                            <Link to= {`/bookings/${currentUser.id}`} className="header-link">  
                               {currentUser.first_name.charAt(0).toUpperCase() + currentUser.first_name.slice(1)}
-                            </Link>
                             <div className="dropdown-content">
-                              {/* <Link className = "dropdown-content" to="/site_create/">Host</Link> */}
                               <Link className="dropdown-content" to="#" onClick={logout}>Sign Out</Link>
                             </div>
                           </li>        
