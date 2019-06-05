@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_SITES, RECEIVE_SITE, UPDATE_SITE_STATE, REMOVE_SITE} from '../actions/site_actions';
+import { RECEIVE_ALL_SITES, RECEIVE_SITE, RECEIVE_SEARCH_SITES, UPDATE_SITE_STATE, REMOVE_SITE} from '../actions/site_actions';
 import {merge} from 'lodash';
 
 const siteReducer = (state = {}, action) => {
@@ -13,6 +13,8 @@ const siteReducer = (state = {}, action) => {
           newState = merge({}, state);
           delete newState[action.site];
           return newState;
+        case RECEIVE_SEARCH_SITES:
+          return action.sites;
         default: 
             return state;
     }

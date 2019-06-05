@@ -4,6 +4,7 @@ export const RECEIVE_ALL_SITES = "RECEIVE_ALL_SITES";
 export const RECEIVE_SITE = "RECEIVE_SITE";
 export const UPDATE_SITE_STATE = "UPDATE_SITE_STATE";
 export const REMOVE_SITE = "REMOVE_SITE";
+export const RECEIVE_SEARCH_SITES = "RECEIVE_SEARCH_SITES";
 
 const receiveSites = (sites) => ({
     sites: sites,
@@ -58,4 +59,14 @@ export const updateExistSite = (site) => dispatch => (
   APIUtil.updateSite(site).then(site => dispatch(receiveSite(site)))
 );
   
+
+const receiveResults = listings => ({
+  type: RECEIVE_SEARCH_SITES,
+  listings
+});
+
+export const searchSites = condition => dispatch =>(
+  APIUtil.searchListings(condition)
+    .then(sites => dispatch(receiveResults(results)))
+);
 

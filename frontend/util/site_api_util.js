@@ -36,3 +36,11 @@ export const destroySite = id => {
     url: `/api/sites/${id}`
   }))
 };
+
+export const searchListings = condition => {
+  return(
+    $.ajax({
+      method: "GET",
+      url: `/api/sites?search=${condition}`
+    }))
+};

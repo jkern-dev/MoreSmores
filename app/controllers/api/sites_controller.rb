@@ -1,6 +1,10 @@
 class Api::SitesController < ApplicationController
     def index 
-      @sites = Site.all
+      if (params[:search]!=nil)
+        @sites = Site.where("lower(name) like ?", "%#{params[:search].downcase}%")
+      else
+        @sites = Site.all
+      end
     end
 
     def show 
