@@ -12,7 +12,6 @@ class Api::BookingsController < ApplicationController
 
   def index
     @bookings = current_user.bookings
-    # @bookings = Booking.find_by(user_id: current_user.id)
   end
 
   def update 
@@ -35,7 +34,6 @@ class Api::BookingsController < ApplicationController
   end
 
   private 
-
   def booking_params
     params.require(:booking).permit(
       :site_id,

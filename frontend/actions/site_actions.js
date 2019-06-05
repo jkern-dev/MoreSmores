@@ -54,11 +54,9 @@ export const deleteSite = site => dispatch => {
   )
 }
 
-
 export const updateExistSite = (site) => dispatch => (
   APIUtil.updateSite(site).then(site => dispatch(receiveSite(site)))
-);
-  
+);  
 
 const receiveResults = listings => ({
   type: RECEIVE_SEARCH_SITES,
