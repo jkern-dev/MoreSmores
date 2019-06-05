@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import { requestAllBookings } from '../../actions/bookings_actions';
+import { requestAllBookings, deleteBooking } from '../../actions/bookings_actions';
 import BookingIndex from './booking_index';
 
 const mapStateToProps = (state) => {
@@ -12,7 +12,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    requestAllBookings: () => dispatch(requestAllBookings())
+    requestAllBookings: () => dispatch(requestAllBookings()),
+    deleteBooking: booking => dispatch(deleteBooking(booking))
   }
 };
 

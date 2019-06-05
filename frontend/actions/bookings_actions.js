@@ -15,13 +15,13 @@ export const createBooking = booking => dispatch => (
     .then(booking => dispatch(receiveBooking(booking)))
 )
 
-export const removeBooking = bookingId => ({
+export const removeBooking = booking => ({
   type: REMOVE_BOOKING,
-  bookingId
+  booking
 })
 
-export const deleteBooking = bookingId => dispatch => (
-  APIUtil.deleteBooking(bookingId)
+export const deleteBooking = booking => dispatch => (
+  APIUtil.deleteBooking(booking)
     .then(booking => dispatch(removeBooking(booking)))
 )
 
