@@ -37,7 +37,6 @@ class Footer extends React.Component {
               </section>
             </div>
             <br />
-            <br />
             <section className="footer-body">
               Discover unique experiences on ranches, nature preserves,
               farms, vineyards, and public campgrounds across the U.S. Book
