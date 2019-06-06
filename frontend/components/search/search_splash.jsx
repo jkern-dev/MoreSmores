@@ -53,7 +53,7 @@ class SplashSearch extends React.Component {
   submitSearch(e) {
     // location.href = '/#/sites'
     e.preventDefault();
-    this.props.history.push(`/sites/${this.state.searchValue}`);
+    this.props.history.push(`/search/${this.state.searchValue}`);
   }
 
   update(field) {

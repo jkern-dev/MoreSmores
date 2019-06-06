@@ -65,6 +65,6 @@ const receiveResults = listings => ({
 
 export const searchSites = condition => dispatch =>(
   APIUtil.searchListings(condition)
-    .then(sites => dispatch(receiveResults(results)))
+    .then(listings => dispatch(receiveResults(listings)))
 );
 

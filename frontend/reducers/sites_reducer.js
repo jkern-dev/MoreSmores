@@ -14,7 +14,7 @@ const siteReducer = (state = {}, action) => {
           delete newState[action.site];
           return newState;
         case RECEIVE_SEARCH_SITES:
-          return action.sites;
+          return action.listings;
         default: 
             return state;
     }

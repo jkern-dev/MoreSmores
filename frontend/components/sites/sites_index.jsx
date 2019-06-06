@@ -12,7 +12,6 @@ class SitesIndex extends React.Component {
     }
 
     componentDidUpdate() {
-      
       const mapOptions = {
         center: { lat: 37.7758, lng: -122.435 },
         zoom: 10

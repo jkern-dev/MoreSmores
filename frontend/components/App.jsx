@@ -12,6 +12,7 @@ library.add(faExclamationTriangle);
 
 import GreetingContainer from './greeting/greeting_container';
 import SitesIndexContainer from './sites/sites_index_container';
+import SitesSearchContainer from './sites/sites_search_container';
 import Footer from './footer';
 
 // Create Site Form
@@ -40,6 +41,11 @@ const App = () => (
       <Route 
         path="/sites/:id" 
         component={SiteShowContainer} 
+      />
+      <Route 
+        exact 
+        path = "/search/:search"
+        component= { SitesSearchContainer}
       />
       <Route 
         exact 
