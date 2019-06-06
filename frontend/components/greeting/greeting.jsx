@@ -9,7 +9,8 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <header className="header">
                 <span >
                   <Link to="/" >
-                    <img src={window.logo} className="logo" />
+                    {/* <img src={window.logo} className="logo" /> */}
+                    <h2 className="logo">More S'mores</h2>
                   </Link>
                 </span>
                 <nav className="header-nav">
@@ -49,8 +50,9 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <Modal />
             <header className="header">
                 <span >
-                  <Link to="/" >
-                    <img src={window.logo} className="logo" />
+                  <Link to="/" className="logo">
+                    {/* <img src={window.logo} className="logo" /> */}
+                    <h2 className="logo">More S'mores</h2>
                   </Link>
                 </span>
                 <nav className="header-nav">

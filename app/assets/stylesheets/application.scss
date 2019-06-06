@@ -9,7 +9,7 @@
 
 
 * {
-    font-family: sans-serif;
+    font-family: 'Cabin', sans-serif;
 }
 
 .header {
@@ -23,6 +23,13 @@
     width: 140px;
     padding-right: 300px;
     margin-top: 10px;
+    text-decoration: none;
+    font-family: 'Cabin', sans-serif;
+    color: grey;
+}
+
+.logo:hover {
+  text-decoration: none;
 }
 
 .not-found {
@@ -55,7 +62,7 @@
     }
 }
 
-.header-link:hover, .logo:hover, .dropdown-content:hover {
+.header-link:hover, .dropdown-content:hover {
     text-decoration: underline;
     text-decoration-color: green;
 }
