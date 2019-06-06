@@ -16,8 +16,11 @@ class BookingDetail extends React.Component {
             src={this.props.booking.photoUrl}
           />
           <div className = "booking-dates">
-            <Link to = {`/sites/${this.props.booking.site_id}`}>
-              <h1 className = "booking-location">{this.props.booking.name}</h1>
+            <Link 
+              to = {`/sites/${this.props.booking.site_id}`} 
+              className="booking-location"
+            >
+              <h1>{this.props.booking.name}</h1>
             </Link>
             <p>Start Date: {this.props.booking.start_date}</p>
             <p>End Date: {this.props.booking.end_date}</p>
