@@ -32,8 +32,9 @@ class Api::SitesController < ApplicationController
 
     def destroy 
         @site = Site.find(params[:id])
-        @site.destroy 
-
+        if current_user.id == @site.user_id
+          @site.destroy 
+        end
         render "api/sites/show"
     end
 
