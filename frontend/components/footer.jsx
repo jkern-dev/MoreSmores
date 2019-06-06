@@ -33,7 +33,7 @@ class Footer extends React.Component {
           <div className="footer-main">
             <div className="footer-heading">
               <section className="footer-title">
-                MoreS'mores is everywhere you want to camp!
+                More S'mores is everywhere you want to camp!
               </section>
             </div>
             <br />
