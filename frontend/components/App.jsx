@@ -37,8 +37,15 @@ const App = () => (
   <div className="body">
     <GreetingContainer />
     <Switch>
-      <Route path="/sites/:id" component={SiteShowContainer} />
-      <Route exact path="/sites/" component={SitesIndexContainer} />
+      <Route 
+        path="/sites/:id" 
+        component={SiteShowContainer} 
+      />
+      <Route 
+        exact 
+        path="/sites/" 
+        component={SitesIndexContainer} 
+      />
       <ProtectedRoute
         exact
         path="/book_now/:siteId"
@@ -49,7 +56,11 @@ const App = () => (
         path = "/bookings/:userId"
         component = {BookingIndexContainer}
       />
-      <ProtectedRoute exact path="/site_create/" component={SiteForm} />
+      <ProtectedRoute 
+        exact 
+        path="/site_create/" 
+        component={SiteForm} 
+      />
       <ProtectedRoute
         exact
         path="/site_create/location"
@@ -60,8 +71,16 @@ const App = () => (
         path="/site_create/activities"
         component={SiteActivities}
       />
-      <ProtectedRoute exact path="/site_create/photo" component={SitePhoto} />
-      <ProtectedRoute exact path="/site_edit/:siteId" component={SiteEdit} />
+      <ProtectedRoute 
+        exact
+        path="/site_create/photo" 
+        component={SitePhoto} 
+      />
+      <ProtectedRoute 
+        exact 
+        path="/site_edit/:siteId" 
+        component={SiteEdit} 
+      />
       <ProtectedRoute
         exact
         path="/site_edit_location/:siteId"
@@ -72,7 +91,11 @@ const App = () => (
         path="/site_edit_activity/:siteId"
         component={SiteEditActivity}
       />
-      <Route exact path="/" component={Splash} />
+      <Route 
+        exact 
+        path="/" 
+        component={Splash} 
+      />
       <Redirect to="/" />
     </Switch>
     <div>

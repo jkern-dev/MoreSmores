@@ -11,7 +11,7 @@ class Api::BookingsController < ApplicationController
   end
 
   def index
-    @bookings = current_user.bookings
+    @bookings = current_user.bookings.order(start_date: :desc)
   end
 
   def update 
