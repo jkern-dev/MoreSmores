@@ -1,6 +1,7 @@
 ## [MoreS'mores](https://moresmores.herokuapp.com/#/)
 
-[MoreS'mores](https://moresmores.herokuapp.com/#/) is a clone of the camping app HipCamp. More S'mores allows users to find camp and reserve camping sites. Additionally users can place their own property as camp sites and control reservations to their camp sites. Every site lists their various amenities such as allowing pets or to park an RV, enabling users to search and find camp sites by their preference.
+* [MoreS'mores](https://moresmores.herokuapp.com/#/) is a clone of the camping app HipCamp. More S'mores allows users to find camp and reserve camping sites. Additionally users can place their own property as camp sites and control reservations to their camp sites. Every site lists their various amenities such as allowing pets or to park an RV, enabling users to search and find camp sites by their preference.
+* Built using Ruby on Rails, React, Redux, Google Maps API, AWS S3 for image storage
 
 ## Install
 ``` bash
@@ -19,17 +20,23 @@ npm start
 bundle exec rails server
 ```
 
-## Future Additions
+## Search Implementation
+* Implementing search was done through an update to Rails backend controller when reuqesting all sites. Including an alternative when a search condition is added in params allows for fetching sites where only the name matches with the search condition. 
 
-* Refine search bar to enable sites to be searched by name and with various filters
+``` ruby
+def index 
+      if (params[:search]!=nil)
+        @sites = Site.where("lower(name) like ?", "%#{params[:search].downcase}%")
+      else
+        @sites = Site.all
+      end
+    end
+ ```
 
-* Update site creation form to allow address entry for site location rather than inputting longitude and latitude directly
+![](search_feature.gif)
 
-* Users that have booked a site enabled to place a review to have listed on a sites detail page 
 
-* Update styling for dynamic display sizes
 
-* Pagination to site index page
 
 
 
