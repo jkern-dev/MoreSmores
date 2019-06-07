@@ -21,8 +21,6 @@ bundle exec rails server
 ```
 
 ## Search Implementation
-* Implementing search was done through an update to Rails backend controller when reuqesting all sites. Including an alternative when a search condition is added in params allows for fetching sites where only the name matches with the search condition. 
-
 ``` ruby
 def index 
       if (params[:search]!=nil)
@@ -32,6 +30,7 @@ def index
       end
     end
  ```
+ * Implementing search was done through an update to Rails backend controller when reuqesting all sites. Including an alternative when a search condition is added in params allows for fetching sites where only the name matches with the search condition. 
 
 ![](search_feature.gif)
 
