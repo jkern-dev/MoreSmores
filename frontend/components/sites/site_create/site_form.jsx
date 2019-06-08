@@ -6,7 +6,12 @@ import { updateSite } from '../../../actions/site_actions';
 class SiteForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { name: this.props.name, description: this.props.description, capacity: this.props.capacity, price: this.props.price }
+        this.state = { 
+          name: this.props.name, 
+          description: this.props.description, 
+          capacity: this.props.capacity, 
+          price: this.props.price 
+        }
         this.nextForm = this.nextForm.bind(this)
     }
 
