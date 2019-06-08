@@ -22,6 +22,7 @@ class MarkerManager {
     const position = new google.maps.LatLng(site.latitude, site.longitude);
     const marker = new google.maps.Marker({
       position,
+      label: site.name,
       map: this.map,
       siteId: site.id
     });

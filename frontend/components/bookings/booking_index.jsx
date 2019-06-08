@@ -1,5 +1,6 @@
 import React from 'react';
 import BookingDetail from './booking_detail';
+import { Link } from 'react-router-dom';
 
 
 class BookingIndex extends React.Component {
@@ -18,13 +19,38 @@ class BookingIndex extends React.Component {
   
 
   render() {
+    debugger
     const bookingItems = this.props.bookings.map(booking => (<BookingDetail key={booking.id} booking={booking} deleteBooking = {this.props.deleteBooking} />))
-    return (
-      <div className = "bookings">
-        <h1>Your Bookings</h1>
-        <ul>{bookingItems}</ul>
-      </div>
-    )
+    const yesItems = () => {
+      return (
+        <div className="bookings">
+          <h1>Your Bookings</h1>
+          <ul>{bookingItems}</ul>
+        </div>
+      )
+    };
+    
+    const noItems = () => {
+      return (
+        <div className = "bookings">
+          <h1>You Have No Bookings!</h1>
+          <Link
+            to="/sites"
+            className="booking-reminder"
+          >
+            <h1>Find a Campsite to book!</h1>
+          </Link>
+        </div>
+      );
+    };
+
+    return this.props.bookings.length > 0 ? yesItems() : noItems();
+    // return (
+    //   <div className = "bookings">
+    //     <h1>Your Bookings</h1>
+    //     <ul>{bookingItems}</ul>
+    //   </div>
+    // )
   }
 }
 
