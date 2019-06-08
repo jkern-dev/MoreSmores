@@ -1,7 +1,7 @@
 class MarkerManager {
   constructor(map, handleClick) {
     this.map = map;
-    this.handleClick = handleClick;
+    // this.handleClick = handleClick;
     this.markers = {};
   }
 
@@ -11,7 +11,8 @@ class MarkerManager {
 
     sites
       .filter(site => !this.markers[site.id])
-      .forEach(newSite => this.createMarkerFromSite(newSite, this.handleClick))
+      // .forEach(newSite => this.createMarkerFromSite(newSite, this.handleClick))
+      .forEach(newSite => this.createMarkerFromSite(newSite))
 
     Object.keys(this.markers)
       .filter(siteId => !sitesObj[siteId])
@@ -22,12 +23,10 @@ class MarkerManager {
     const position = new google.maps.LatLng(site.latitude, site.longitude);
     const marker = new google.maps.Marker({
       position,
-      label: site.name,
+      // label: site.name,
       map: this.map,
       siteId: site.id
     });
-
-    marker.addListener('click', () => this.handleClick(site));
     this.markers[marker.siteId] = marker;
   }
 
