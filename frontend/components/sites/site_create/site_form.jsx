@@ -50,21 +50,22 @@ class SiteForm extends React.Component {
               onChange={this.update("description")}
               placeholder="Site Description"
             />
-            <input
-              type="number"
-              className="site-cap"
-              min="0"
-              placeholder = "Capacity"
-              onChange={this.update("capacity")}
-            />
-            <input
-              type="number"
-              className="site-cap"
-              min="0"
-              placeholder="Price Per Night"
-              onChange={this.update("price")}
-            />
-            <br />
+            <div className = "site-nums">
+              <input
+                type="number"
+                className="site-cap"
+                min="0"
+                placeholder = "Capacity"
+                onChange={this.update("capacity")}
+              />
+              <input
+                type="number"
+                className="site-cap"
+                min="0"
+                placeholder="Price Per Night"
+                onChange={this.update("price")}
+              />
+            </div>
             {next}
           </div>
         );
