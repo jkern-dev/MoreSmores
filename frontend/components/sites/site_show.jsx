@@ -70,7 +70,9 @@ class SiteShow extends React.Component {
         const book = (this.props.sessionId===null) ? unauthbookButton: bookButton
         return (
           <div className="site-show">
-            <img src={site.photoUrl} />
+            <div className = "site-show-photo">
+              <img src={site.photoUrl} />
+            </div>
             <div className="site-info">
               <div className = "site-heading">
                 <h1>{site.name}</h1>
