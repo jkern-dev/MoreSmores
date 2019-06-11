@@ -44,14 +44,13 @@ class SplashSearch extends React.Component {
 
   flipRv() {
     if (document.getElementById("rv").className === "search-button") {
-      document.getElementById("rv").className = "search-button-active"
+      document.getElementById("rv").className = "search-button-active";
     } else {
-      document.getElementById("rv").className = "search-button"
+      document.getElementById("rv").className = "search-button";
     }
   };
 
   submitSearch(e) {
-    // location.href = '/#/sites'
     e.preventDefault();
     this.props.history.push(`/search/${this.state.searchValue}`);
   }
