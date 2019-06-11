@@ -61,20 +61,22 @@ class SiteEdit extends React.Component {
           onChange={this.update("description")}
           placeholder="Site Description"
         />
-        <input
-          type="number"
-          className="site-cap"
-          min="0"
-          value={this.state.capacity}
-          onChange={this.update("capacity")}
-        />
-        <input
-          type="number"
-          className="site-cap"
-          min="0"
-          value={this.state.price}
-          onChange={this.update("price")}
-        />
+        <div className="site-nums">
+          <input
+            type="number"
+            className="site-cap"
+            min="0"
+            value={this.state.capacity}
+            onChange={this.update("capacity")}
+          />
+          <input
+            type="number"
+            className="site-cap"
+            min="0"
+            value={this.state.price}
+            onChange={this.update("price")}
+          />
+        </div>
         <br />
         {next}
       </div>

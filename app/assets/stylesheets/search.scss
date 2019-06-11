@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  width: 100%;
+  width: 99%;
 }
 
 .search-button {
@@ -36,6 +36,10 @@
   border-width: 1px;
   padding: 20px 80px 20px 80px;
   text-align: center;
+}
+
+.search-button:hover, .search-submit:hover {
+  cursor: pointer;
 }
 
 .search-button-active {
@@ -53,6 +57,7 @@
   padding: 20px 80px 20px 80px;
   background: #00e6ac;
   color: white;
+  font-size: 1.1rem;
 }
 
 
