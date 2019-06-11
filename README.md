@@ -20,7 +20,20 @@ npm start
 bundle exec rails server
 ```
 
+## Viewing Sites
+* Users can view site listings and select individual sites to see additional details related to a specific site
+
+![](index_page.png)
+
+![](site_show.png)
+
+## Booking a Site
+* Should a user find a site of their liking they are able to reserve the site, additionally users can view their placed bookings from the bookings section of their profile.
+
+![](bookings_screen.png)
+
 ## Search Implementation
+ * Implementing search was done through an update to Rails backend controller when reuqesting all sites. Including an alternative when a search condition is added in params allows for fetching sites where only the name matches with the search condition. 
 ``` ruby
 def index 
       if (params[:search]!=nil)
@@ -30,8 +43,6 @@ def index
       end
     end
  ```
- * Implementing search was done through an update to Rails backend controller when reuqesting all sites. Including an alternative when a search condition is added in params allows for fetching sites where only the name matches with the search condition. 
-
 ![](search_feature.gif)
 
 
