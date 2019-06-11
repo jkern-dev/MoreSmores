@@ -30,7 +30,7 @@ class SitesIndex extends React.Component {
             <div className = "index-body">
                 <h3>The best camping around!</h3>
                 <div className = "index-container">
-                    <div >
+                    <div>
                         <div>
                             <ul className="sites-list">{siteItems}</ul>
                         </div>

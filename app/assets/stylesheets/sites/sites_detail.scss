@@ -1,5 +1,5 @@
 .index-body {
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
   h3 {
     margin-left: 95px;
@@ -18,21 +18,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 700px;
+    min-width: 700px;
+    width: 80%;
 }
-
-// .site-show-photo {
-//   // width: 800px;
-//   // img {
-//     // width: 100%;
-//     // object-fit: cover;
-//   // }
-// }
 
 .site-item {
     list-style: none;
-    width: 320px;
-    height: 220px;
+    width: 340px;
+    height: 250px;
     display: block;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -88,9 +81,10 @@
 
 .site-image {
   img {
-        width: 320px;
-        height: 100px;
+        width: 340px;
+        height: 130px;
         margin: 0 auto;
+        object-fit: cover;
     }
 }
 
