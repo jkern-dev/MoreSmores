@@ -20,7 +20,6 @@ class SitesIndex extends React.Component {
       this.map = new google.maps.Map(this.mapNode, mapOptions);
       this.MarkerManager = new MarkerManager(this.map);
       this.MarkerManager.updateMarkers(this.props.sites);
-      debugger
       // this.MarkerManager.markers.forEach(marker, () => console.log(marker.site));
     }
 
