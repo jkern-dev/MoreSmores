@@ -31,7 +31,7 @@ class BookingIndex extends React.Component {
     
     const noItems = () => {
       return (
-        <div className = "bookings">
+        <div className = "no-bookings">
           <h1>You Have No Bookings!</h1>
           <Link
             to="/sites"
