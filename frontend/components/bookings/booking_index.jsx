@@ -19,7 +19,14 @@ class BookingIndex extends React.Component {
   
 
   render() {
-    const bookingItems = this.props.bookings.map(booking => (<BookingDetail key={booking.id} booking={booking} deleteBooking = {this.props.deleteBooking} />))
+    const bookingItems = this.props.bookings.map(booking => (
+      <BookingDetail 
+        key={booking.id} 
+        booking={booking} 
+        deleteBooking = {this.props.deleteBooking} 
+      />
+    ))
+
     const yesItems = () => {
       return (
         <div className="bookings">
@@ -44,12 +51,6 @@ class BookingIndex extends React.Component {
     };
 
     return this.props.bookings.length > 0 ? yesItems() : noItems();
-    // return (
-    //   <div className = "bookings">
-    //     <h1>Your Bookings</h1>
-    //     <ul>{bookingItems}</ul>
-    //   </div>
-    // )
   }
 }
 

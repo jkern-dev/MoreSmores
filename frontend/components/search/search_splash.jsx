@@ -73,11 +73,26 @@ class SplashSearch extends React.Component {
             onChange={this.update("searchValue")}
           />
           <div className="search-buttons">
-            {/* <div className="search-button" id = "anytime" onClick= {this.flipCalendar}><FontAwesomeIcon icon="calendar-alt" /> Anytime</div> */}
-            <div className="search-button" id="campsite" onClick={this.flipCamp}><FontAwesomeIcon icon="campground" /> Campsites</div>
-            <div className="search-button" id="lodging" onClick={this.flipLodging}><FontAwesomeIcon icon="dog" /> Pets</div>
-            <div className="search-button" id="rv" onClick={this.flipRv}><FontAwesomeIcon icon="bus" /> RVs</div>
-            {/* <div className="search-submit">Search</div> */}
+            {/* <div 
+              className="search-button" 
+              id = "anytime" 
+              onClick= {this.flipCalendar}
+            ><FontAwesomeIcon icon="calendar-alt" /> Anytime</div> */}
+            <div 
+              className="search-button" 
+              id="campsite" 
+              onClick={this.flipCamp}
+            ><FontAwesomeIcon icon="campground" /> Campsites</div>
+            <div 
+              className="search-button" 
+              id="lodging" 
+              onClick={this.flipLodging}
+            ><FontAwesomeIcon icon="dog" /> Pets</div>
+            <div 
+              className="search-button" 
+              id="rv" 
+              onClick={this.flipRv}
+            ><FontAwesomeIcon icon="bus" /> RVs</div>
             <input type="submit" value="Search" className="search-submit"/>
           </div>
         </form>
