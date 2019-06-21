@@ -31,7 +31,7 @@ class SiteShow extends React.Component {
     render() {
         const editButton = (
           <div className="owner-options">
-            <button>
+            <button className = "edit-button">
               <Link to={`/site_edit/${this.props.site.id}`}>Edit Site!</Link>
             </button>
             <button 

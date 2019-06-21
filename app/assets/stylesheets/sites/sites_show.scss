@@ -27,11 +27,10 @@
   margin-top: 25px;
   a {
     text-decoration: none;
-    color: grey;
+    color: white;
   }
   .edit-button {
     text-decoration: none;
-    color: grey;
   }
 }
 
@@ -90,6 +89,17 @@
       color: white;
       margin: 0 auto;
     }
+
+.edit-button {
+  width: 35%;
+  border-style: solid;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #00e6ac;
+  font-size: 1.1rem;
+  color: white;
+}
+
 
 .line-break {
   width: 100%;
