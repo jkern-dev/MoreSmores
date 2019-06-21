@@ -23,7 +23,7 @@ const Splash = () => {
     const random_splash = splash_title[Math.floor(Math.random() * splash_title.length)];
 
     return (
-      <>
+      <div className = "splash-full">
         <div className="splash-content">
           <span className="splash-title">
             <h2>{random_splash}</h2>
@@ -39,7 +39,7 @@ const Splash = () => {
         <div className="search-content">
           <SplashSearch />
         </div>
-      </>
+      </div>
     );
 }
 

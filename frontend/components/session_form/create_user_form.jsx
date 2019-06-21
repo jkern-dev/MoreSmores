@@ -50,7 +50,7 @@ class AccountForm extends React.Component {
     render() {
         return (
             <div>
-                <h2>Join Hipcamp</h2>
+                <h2>Join More S'Mores!</h2>
                 <form className = "auth-form" onSubmit={this.handleSubmit}>
                     {this.renderErrors()}
                     <div>
