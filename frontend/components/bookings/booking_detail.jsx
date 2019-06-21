@@ -25,7 +25,7 @@ class BookingDetail extends React.Component {
             <p>Start Date: {this.props.booking.start_date}</p>
             <p>End Date: {this.props.booking.end_date}</p>
             <button 
-              className="edit-button" 
+              className="delete-button" 
               onClick={() => this.props.deleteBooking(this.props.booking.id)
                 .then(this.props.history.push('/'))}
             >Delete Booking</button>
