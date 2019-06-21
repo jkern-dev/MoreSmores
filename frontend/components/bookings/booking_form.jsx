@@ -27,7 +27,8 @@ class BookingForm extends React.Component {
     e.preventDefault();
     const booking = Object.assign({}, this.state);
     this.props.createBooking(booking)
-      .then(() => this.props.closeModal());
+      .then(() => this.props.closeModal())
+      .then(this.props.history.push(`/bookings/${this.props.user_id}`));
   }
 
   handleDateChange(type) {
