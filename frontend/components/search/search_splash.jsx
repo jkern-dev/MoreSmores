@@ -73,11 +73,6 @@ class SplashSearch extends React.Component {
             onChange={this.update("searchValue")}
           />
           <div className="search-buttons">
-            {/* <div 
-              className="search-button" 
-              id = "anytime" 
-              onClick= {this.flipCalendar}
-            ><FontAwesomeIcon icon="calendar-alt" /> Anytime</div> */}
             <div 
               className="search-button" 
               id="campsite" 
