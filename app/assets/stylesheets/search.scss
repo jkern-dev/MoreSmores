@@ -1,14 +1,15 @@
 .search-content{
   height: 400px;
   width: 85%;
-  min-width: 1200px;
+  min-width: 1000px;
   margin: 0 auto;
 }
 
 .search-box {
   display: flex;
+  text-align: center;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 20px 10px;
   background: white;
   border-radius: 15px;
@@ -16,20 +17,24 @@
 }
 
 .search-bar {
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 20px;
   font-size: 1.3rem;
+  border-radius: 15px;
+  border-width: 1px;
+
 
 }
 
 .search-buttons {
   display: flex;
+  margin: 0 auto;
   justify-content: space-between;
-  margin-top: 20px;
-  width: 99%;
+  margin-top: 10px;
+  width: 95%;
 }
 
 .search-button {
@@ -38,7 +43,7 @@
   border-radius: 15px;
   background: white;
   border-width: 1px;
-  padding: 20px 80px 20px 80px;
+  padding: 20px 60px 20px 60px;
   text-align: center;
 }
 
@@ -50,7 +55,7 @@
   border-style: solid;
   border-color: grey;
   border-width: 1px;
-  padding: 20px 80px 20px 80px;
+  padding: 20px 60px 20px 60px;
   text-align: center;
   background: #00e6ac;
   border-radius: 15px;

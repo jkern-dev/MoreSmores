@@ -13,11 +13,12 @@
 }
 
 .header {
-    width: 95%;
+    width: 80%;
     display: flex;
     margin: 0 auto;
+    // margin-left: 50px;
     justify-content: space-between;
-    min-width: 1200px;
+    min-width: 1000px;
 }
 
 .logo {
@@ -95,15 +96,15 @@
 }
 
 .splash-full { 
-  background-image: asset_url('splash_background.jpeg');
+  background-image: asset_url('splash_background_2.jpeg');
   background-size: 100% 100%;
-  min-width: 1200px;
+  min-width: 1000px;
 }
 
 .splash-content {
-    width: 60%;
+    width: 85%;
     margin-left: 10%;
-    padding-top: 30px;
+    padding-top: 5px;
     padding-bottom: 20px;
 }
 

@@ -25,9 +25,9 @@ class Footer extends React.Component {
               <a href="https://www.linkedin.com/in/jkern620/">
                 <FontAwesomeIcon icon={["fab", "linkedin"]} /> LinkedIn
               </a>
-              <a href="https://www.hipcamp.com">
+              {/* <a href="https://www.hipcamp.com">
                 <FontAwesomeIcon icon="campground" /> HipCamp
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="footer-main">
