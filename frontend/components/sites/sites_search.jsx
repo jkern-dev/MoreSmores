@@ -26,8 +26,27 @@ class SiteSearchIndex extends React.Component {
 
   render() {
     const siteItems = this.props.sites.map(site => (<SiteDetail key={site.id} site={site} />)) 
-    return (
-      this.props.sites && (
+    
+    const noItems = () => {
+      return (
+        <div className="index-body">
+          <h3>No Sites Matched Your Search!</h3>
+          <div className="index-container">
+            <div >
+              <div>
+              </div>
+            </div>
+            <div className="sites-map">
+              <div className="sites-map" ref={map => this.mapNode = map}></div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+
+    const yesItems = () => {
+      return (
         <div className="index-body">
           <h3>The best camping around!</h3>
           <div className="index-container">
@@ -41,8 +60,29 @@ class SiteSearchIndex extends React.Component {
             </div>
           </div>
         </div>
-      )
-    );
+      );
+    }
+
+    return this.props.sites.length > 0 ? yesItems() : noItems();
+    // return (
+    //   this.props.sites && (
+    //     <div className="index-body">
+    //       <h3>The best camping around!</h3>
+    //       <div className="index-container">
+    //         <div >
+    //           <div>
+    //             <ul className="sites-list">{siteItems}</ul>
+    //           </div>
+    //         </div>
+    //         <div className="sites-map">
+    //           <div className="sites-map" ref={map => this.mapNode = map}></div>
+    //         </div>
+    //       </div>
+    //     </div>
+
+
+    //   )
+    // );
   }
 }
 
