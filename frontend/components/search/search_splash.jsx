@@ -62,7 +62,7 @@ class SplashSearch extends React.Component {
       });
   }
 
-  render(){
+  render() {
     return (
       <div className="search-box">
       <form onSubmit = {this.submitSearch}>
