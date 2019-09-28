@@ -33,5 +33,5 @@ export const receiveAllBookings = bookings => ({
 export const requestAllBookings = () => dispatch => (
   APIUtil.fetchBookings()
     .then(bookings => dispatch(receiveAllBookings(bookings)))
-)
+);
 

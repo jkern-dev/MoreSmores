@@ -67,4 +67,3 @@ export const searchSites = condition => dispatch => (
   APIUtil.searchListings(condition)
     .then(listings => dispatch(receiveResults(listings)))
 );
-
