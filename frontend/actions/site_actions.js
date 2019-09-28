@@ -63,7 +63,7 @@ const receiveResults = listings => ({
   listings
 });
 
-export const searchSites = condition => dispatch =>(
+export const searchSites = condition => dispatch => (
   APIUtil.searchListings(condition)
     .then(listings => dispatch(receiveResults(listings)))
 );
